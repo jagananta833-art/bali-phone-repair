@@ -27,6 +27,9 @@ Route::get('/feed.xml', [PublicController::class, 'rss'])->name('rss');
 Route::get('/robots.txt', fn () => response()
     ->view('public.robots')
     ->header('Content-Type', 'text/plain; charset=UTF-8'))->name('robots');
+Route::get('/4c3b28b78912443a9d94943fcf13db1b.txt', fn () => response('4c3b28b78912443a9d94943fcf13db1b', 200, ['Content-Type' => 'text/plain; charset=UTF-8']))->name('indexnow.key');
+Route::get('/indexnow.txt', fn () => response('4c3b28b78912443a9d94943fcf13db1b', 200, ['Content-Type' => 'text/plain; charset=UTF-8']))->name('indexnow.txt');
+Route::get('/llms.txt', fn () => response(file_exists(public_path('llms.txt')) ? file_get_contents(public_path('llms.txt')) : '', 200, ['Content-Type' => 'text/plain; charset=UTF-8']))->name('llms.txt');
 Route::permanentRedirect('/assets/bali-phone-repair/index-improved.html', '/')
     ->name('legacy.home');
 

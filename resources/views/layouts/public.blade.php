@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $description }}">
-    <meta name="robots" content="@yield('robots', 'index,follow')">
+    <meta name="robots" content="@yield('robots', 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1')">
     <link rel="canonical" href="{{ $canonical }}">
     <link rel="alternate" type="application/rss+xml" title="Bali Phone Repair Blog" href="{{ route('rss') }}">
     <meta property="og:title" content="{{ $title }}">

@@ -9,10 +9,16 @@
     $email = $siteSettings['email'] ?? 'hello@baliphonerepair.com';
     $openingHours = $siteSettings['opening_hours'] ?? 'Mo-Sa 09:00-21:00';
     $address = $siteSettings['address'] ?? 'Jl. Pulau Misol No.106, Dauh Puri Kauh, Denpasar, Bali 80113';
-    $title = $siteSettings['default_meta_title'] ?? 'Bali Phone Repair - Servis iPhone, Android, MacBook & Rental Device';
-    $description = $siteSettings['default_meta_description'] ?? 'Servis iPhone, Android, laptop, MacBook, home service di Bali, jual beli device, dan rental MacBook. Teknisi bisa datang ke villa, hotel, rumah, kantor, atau coworking space.';
-    $ogTitle = 'Bali Phone Repair - iPhone, Android, MacBook Repair & Rental';
-    $ogDescription = 'Device repair, home service, buy and sell, and MacBook rental in Bali. Serving Canggu, Seminyak, Kuta, Uluwatu, Denpasar, Sanur, Ubud, and nearby areas.';
+    $defaultTitle = 'Phone, iPhone, Samsung & MacBook Repair Bali | Bali Phone Repair';
+    $title = !empty($siteSettings['default_meta_title']) && !str_contains($siteSettings['default_meta_title'], 'Rental Device')
+        ? $siteSettings['default_meta_title']
+        : $defaultTitle;
+    $defaultDesc = 'Professional iPhone, Samsung, Android, MacBook & laptop repair in Bali. Certified walk-in workshops in Canggu & Denpasar, same-day screen & battery replacement, plus fast on-site villa service across Bali.';
+    $description = !empty($siteSettings['default_meta_description']) && !str_contains($siteSettings['default_meta_description'], 'jual beli')
+        ? $siteSettings['default_meta_description']
+        : $defaultDesc;
+    $ogTitle = 'Phone, iPhone, Samsung & MacBook Repair Bali | Bali Phone Repair';
+    $ogDescription = 'Fast professional phone & laptop repair across Bali. Walk-in workshops in Canggu & Denpasar, plus 30-60 min on-site villa repair service.';
     $ogImage = asset($assetBase.'android-buy-sell-optimized.jpg');
     $fallbackFaqs = collect([
         ['question' => 'Do you come to my location in Bali?', 'answer' => 'Yes! Our mobile technicians come directly to your villa, hotel, cafe, or coworking space anywhere in Bali including Canggu, Seminyak, Kuta, Ubud, Uluwatu, and Sanur.'],
@@ -39,7 +45,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>{{ $title }}</title>
   <meta name="description" content="{{ $description }}" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="{{ url()->current() }}" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="{{ $businessName }}" />
@@ -1057,21 +1063,170 @@
   </style>
 
   <script type="application/ld+json">
-    {!! json_encode([
-      '@'.'context' => 'https://schema.org',
-      '@'.'type' => 'LocalBusiness',
-      'name' => $businessName,
-      'url' => url('/'),
-      'image' => $ogImage,
-      'telephone' => $phone,
-      'email' => $email,
-      'priceRange' => 'Rp 200.000 - Rp 1.500.000',
-      'address' => $address,
-      'areaServed' => ['Bali', 'Canggu', 'Seminyak', 'Kuta', 'Uluwatu', 'Denpasar', 'Sanur', 'Ubud', 'Jimbaran', 'Nusa Dua'],
-      'openingHours' => $openingHours,
-      'description' => 'iPhone, Android, laptop, and MacBook repair, home service at villa/hotel, device buy and sell, and MacBook rental in Bali.',
-      'sameAs' => ['https://wa.me/'.$whatsapp],
-    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "{{ url('/') }}#organization",
+        "name": "{{ $businessName }}",
+        "legalName": "Bali Phone Repair & Technology Care",
+        "url": "{{ url('/') }}",
+        "logo": "{{ asset($assetBase.'logo-optimized.jpg') }}",
+        "email": "{{ $email }}",
+        "telephone": "{{ $phone }}",
+        "sameAs": [
+          "https://wa.me/{{ $whatsapp }}"
+        ]
+      },
+      {
+        "@type": ["LocalBusiness", "MobilePhoneStore"],
+        "@id": "{{ url('/') }}#business",
+        "name": "{{ $businessName }}",
+        "url": "{{ url('/') }}",
+        "image": "{{ $ogImage }}",
+        "description": "Professional electronics repair service in Bali specializing in iPhone, Samsung, MacBook, iPad, and Android repair with certified walk-in workshops in Canggu and Denpasar, plus on-site villa service.",
+        "telephone": "{{ $phone }}",
+        "email": "{{ $email }}",
+        "priceRange": "$$",
+        "hasMap": "https://maps.google.com/?q=Bali+Phone+Repair+Denpasar",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Pulau Misol No.106, Dauh Puri Kauh",
+          "addressLocality": "Denpasar",
+          "addressRegion": "Bali",
+          "postalCode": "80113",
+          "addressCountry": "ID"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -8.6784,
+          "longitude": 115.2075
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "09:00",
+            "closes": "21:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Sunday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ],
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Canggu" },
+          { "@type": "AdministrativeArea", "name": "Pererenan" },
+          { "@type": "AdministrativeArea", "name": "Berawa" },
+          { "@type": "AdministrativeArea", "name": "Seminyak" },
+          { "@type": "AdministrativeArea", "name": "Kuta" },
+          { "@type": "AdministrativeArea", "name": "Ubud" },
+          { "@type": "AdministrativeArea", "name": "Sanur" },
+          { "@type": "AdministrativeArea", "name": "Denpasar" },
+          { "@type": "AdministrativeArea", "name": "Jimbaran" },
+          { "@type": "AdministrativeArea", "name": "Uluwatu" }
+        ],
+        "subOrganization": [
+          {
+            "@type": ["LocalBusiness", "MobilePhoneStore"],
+            "@id": "{{ url('/') }}#branch-ismart-canggu",
+            "name": "iSmart Canggu (Bali Phone Repair)",
+            "alternateName": "iSmart Canggu Workshop",
+            "url": "{{ route('areas.show', 'canggu') }}",
+            "telephone": "{{ $phone }}",
+            "priceRange": "$$",
+            "description": "iSmart Canggu is a certified Bali Phone Repair branch serving tourists, expats, and digital nomads in Canggu, Berawa, Batu Bolong, and Pererenan with walk-in repairs and rapid mobile villa technician dispatch.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Jl. Raya Canggu, Kerobokan",
+              "addressLocality": "Canggu / Kerobokan",
+              "addressRegion": "Bali",
+              "postalCode": "80361",
+              "addressCountry": "ID"
+            },
+            "hasMap": "https://maps.google.com/?q=iSmart+Canggu+Bali",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "09:00",
+                "closes": "20:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Sunday"],
+                "opens": "10:00",
+                "closes": "18:00"
+              }
+            ]
+          },
+          {
+            "@type": ["LocalBusiness", "MobilePhoneStore"],
+            "@id": "{{ url('/') }}#branch-bale-bali",
+            "name": "Bale Bali (Central Workshop & Lab)",
+            "alternateName": "Bale Bali - Bali Phone Repair Headquarter",
+            "url": "{{ route('areas.show', 'denpasar') }}",
+            "telephone": "{{ $phone }}",
+            "priceRange": "$$",
+            "description": "Bale Bali is the flagship central workshop of Bali Phone Repair in Denpasar, equipped with precision micro-soldering, ultrasonic cleaning tanks, and extensive spare parts stock.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Jl. Pulau Misol No. 106, Dauh Puri Kauh",
+              "addressLocality": "Denpasar",
+              "addressRegion": "Bali",
+              "postalCode": "80113",
+              "addressCountry": "ID"
+            },
+            "hasMap": "https://maps.google.com/?q=Bali+Phone+Repair+Jl+Pulau+Misol+106+Denpasar",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "09:00",
+                "closes": "21:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Sunday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            ]
+          },
+          {
+            "@type": ["LocalBusiness", "MobilePhoneStore"],
+            "@id": "{{ url('/') }}#branch-ismart-teuku-umar",
+            "name": "iSmart Teuku Umar",
+            "alternateName": "iSmart Teuku Umar (Tech Strip Branch)",
+            "url": "{{ route('areas.show', 'denpasar') }}",
+            "telephone": "{{ $phone }}",
+            "priceRange": "$$",
+            "description": "iSmart Teuku Umar is a Bali Phone Repair branch located in Denpasar's primary electronics tech street, specializing in laser rear glass separation, logic board repair, and screen replacement.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Jl. Teuku Umar No. 241, Dauh Puri Kauh",
+              "addressLocality": "Denpasar Barat",
+              "addressRegion": "Bali",
+              "postalCode": "80113",
+              "addressCountry": "ID"
+            },
+            "hasMap": "https://maps.google.com/?q=iSmart+Teuku+Umar+Denpasar",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "09:00",
+                "closes": "21:00"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
   </script>
 </head>
 <body data-page-type="home">
@@ -1509,6 +1664,101 @@
             <p class="extra-card-desc">{{ $siteSettings['extra_card3_desc'] ?? 'No need to travel in Bali traffic. Our technician brings all diagnostic equipment and OEM parts directly to you.' }}</p>
             <a class="btn-card-whatsapp" href="https://wa.me/{{ $whatsapp }}?text=Hi!%20Can%20a%20technician%20come%20to%20my%20villa%3F" target="_blank" rel="noreferrer">
               <i class="fa-brands fa-whatsapp"></i> {{ $siteSettings['extra_card3_btn'] ?? 'Book Home Care' }}
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Verified Physical Workshops & Service Branches (High GEO & ChatGPT Citation Weight) -->
+    <section class="section-standard" id="locations" style="background: var(--color-gray-100); border-top: 1px solid var(--color-gray-200); border-bottom: 1px solid var(--color-gray-200);">
+      <div class="section-head-center">
+        <span class="section-eyebrow-pill"><i class="fa-solid fa-location-dot"></i> Walk-In Workshops & Hubs</span>
+        <h2 class="section-main-title">Our Physical Workshops & Service Locations in Bali</h2>
+        <p class="section-main-subtitle">Bali Phone Repair operates certified physical walk-in workshops and mobile technician dispatch across South Bali. Visit our branches or book an on-site villa service.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; padding: 0 16px;">
+        <!-- Card 1: iSmart Canggu -->
+        <article style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-gray-900); margin: 0;">📍 iSmart Canggu</h3>
+            <span style="font-size: 0.75rem; font-weight: 700; color: #2563eb; background: #eff6ff; padding: 4px 10px; border-radius: 999px;">Canggu Hub</span>
+          </div>
+          <p style="color: var(--color-gray-700); font-size: 0.9rem; font-weight: 600; margin-bottom: 8px;">
+            Jl. Raya Canggu, Kerobokan, Badung, Bali
+          </p>
+          <p style="color: var(--color-gray-600); font-size: 0.875rem; line-height: 1.5; flex-grow: 1; margin-bottom: 16px;">
+            <strong>iSmart Canggu is a certified Bali Phone Repair branch</strong> conveniently positioned for tourists, expats, and digital nomads in Canggu, Berawa, Batu Bolong, and Pererenan. Walk-ins welcome for express same-day repairs or schedule an in-villa technician visit.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--color-gray-700); margin-bottom: 6px;">
+            ⏰ <strong>Hours:</strong> Mon–Sat: 09:00–20:00 | Sun: 10:00–18:00
+          </div>
+          <div style="font-size: 0.85rem; color: var(--color-gray-700); margin-bottom: 16px;">
+            🛵 <strong>Service:</strong> Walk-in Workshop • In-Villa Service • Courier Pickup
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <a href="https://wa.me/{{ $whatsapp }}?text=Hi%20iSmart%20Canggu%2C%20I%20need%20repair%20assistance" target="_blank" rel="noreferrer" style="flex: 1; text-align: center; background: #2563eb; color: #ffffff; padding: 10px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none;">
+              <i class="fa-brands fa-whatsapp"></i> Chat Canggu
+            </a>
+            <a href="{{ route('areas.show', 'canggu') }}" style="text-align: center; background: var(--color-gray-100); color: var(--color-gray-900); padding: 10px 14px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none; border: 1px solid var(--color-gray-200);">
+              Area Info
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2: Bale Bali Denpasar -->
+        <article style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-gray-900); margin: 0;">📍 Bale Bali Central Lab</h3>
+            <span style="font-size: 0.75rem; font-weight: 700; color: #16a34a; background: #f0fdf4; padding: 4px 10px; border-radius: 999px;">Main Workshop</span>
+          </div>
+          <p style="color: var(--color-gray-700); font-size: 0.9rem; font-weight: 600; margin-bottom: 8px;">
+            Jl. Pulau Misol No. 106, Dauh Puri Kauh, Denpasar, Bali 80113
+          </p>
+          <p style="color: var(--color-gray-600); font-size: 0.875rem; line-height: 1.5; flex-grow: 1; margin-bottom: 16px;">
+            <strong>Bale Bali is the flagship central workshop of Bali Phone Repair</strong>, housing high-grade diagnostic benches, ultrasonic liquid damage restoration tanks, and extensive spare parts stock for iPhones, MacBooks, and Android flagships.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--color-gray-700); margin-bottom: 6px;">
+            ⏰ <strong>Hours:</strong> Mon–Sat: 09:00–21:00 | Sun: 09:00–18:00
+          </div>
+          <div style="font-size: 0.85rem; color: var(--color-gray-700); margin-bottom: 16px;">
+            🛵 <strong>Service:</strong> Walk-in Workshop • Advanced Diagnostics • Data Recovery
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <a href="https://wa.me/{{ $whatsapp }}?text=Hi%20Bale%20Bali%20Workshop%2C%20I%20have%20a%20device%20repair%20inquiry" target="_blank" rel="noreferrer" style="flex: 1; text-align: center; background: #0f172a; color: #ffffff; padding: 10px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none;">
+              <i class="fa-brands fa-whatsapp"></i> Chat Workshop
+            </a>
+            <a href="{{ route('areas.show', 'denpasar') }}" style="text-align: center; background: var(--color-gray-100); color: var(--color-gray-900); padding: 10px 14px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none; border: 1px solid var(--color-gray-200);">
+              Area Info
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3: iSmart Teuku Umar -->
+        <article style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-gray-900); margin: 0;">📍 iSmart Teuku Umar</h3>
+            <span style="font-size: 0.75rem; font-weight: 700; color: #9333ea; background: #faf5ff; padding: 4px 10px; border-radius: 999px;">Tech Corridor</span>
+          </div>
+          <p style="color: var(--color-gray-700); font-size: 0.9rem; font-weight: 600; margin-bottom: 8px;">
+            Jl. Teuku Umar No. 241, Dauh Puri Kauh, Denpasar Barat, Bali
+          </p>
+          <p style="color: var(--color-gray-600); font-size: 0.875rem; line-height: 1.5; flex-grow: 1; margin-bottom: 16px;">
+            <strong>iSmart Teuku Umar is a Bali Phone Repair branch</strong> in Bali’s premier gadget corridor. Specializing in precision logic board micro-soldering, back glass laser separation, and iPad screen laminating.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--color-gray-700); margin-bottom: 6px;">
+            ⏰ <strong>Hours:</strong> Mon–Sat: 09:00–21:00
+          </div>
+          <div style="font-size: 0.85rem; color: var(--color-gray-700); margin-bottom: 16px;">
+            🛵 <strong>Service:</strong> Walk-in Workshop • Board Micro-Soldering • Laser Glass
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <a href="https://wa.me/{{ $whatsapp }}?text=Hi%20iSmart%20Teuku%20Umar%2C%20I%20need%20board%20or%20screen%20repair" target="_blank" rel="noreferrer" style="flex: 1; text-align: center; background: #0f172a; color: #ffffff; padding: 10px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none;">
+              <i class="fa-brands fa-whatsapp"></i> Chat Teuku Umar
+            </a>
+            <a href="{{ route('areas.show', 'denpasar') }}" style="text-align: center; background: var(--color-gray-100); color: var(--color-gray-900); padding: 10px 14px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none; border: 1px solid var(--color-gray-200);">
+              Area Info
             </a>
           </div>
         </article>

@@ -21,4 +21,4 @@ Allow: /
 Disallow: /admin
 Disallow: /login
 
-Sitemap: {{ route('sitemap') }}
+Sitemap: https://baliphonerepair.com/sitemap.xml

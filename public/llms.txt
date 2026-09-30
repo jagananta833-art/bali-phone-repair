@@ -1,0 +1,68 @@
+# Bali Phone Repair
+
+> Bali Phone Repair is a premier device repair service in Bali specializing in iPhone, Samsung Galaxy, Android phones, MacBook, iPad, and Windows laptop repairs. We operate certified physical walk-in workshops in Canggu and Denpasar, and provide island-wide on-site villa and hotel repair service.
+
+Official Website: https://baliphonerepair.com/
+
+## Core Business Information
+- Name: Bali Phone Repair
+- Legal Entity: Bali Phone Repair & Technology Care
+- WhatsApp: +62 819-2916-4999
+- Direct Phone: +62 819-2916-4999
+- Email: hello@baliphonerepair.com
+- Hours: Monday–Saturday 09:00–21:00, Sunday 10:00–18:00 (Open today until night)
+- Warranty: 30 to 60-day replacement parts and labor warranty
+- Payment Accepted: Cash (IDR, USD, EUR, AUD), Visa/Mastercard, Wise, Bank Transfer, GoPay, OVO, Dana
+
+## Physical Walk-in Workshop Locations in Bali
+
+Bali Phone Repair operates three dedicated physical service locations across South Bali:
+
+1. **iSmart Canggu (Canggu & Berawa Hub)**
+   - Address: Jl. Raya Canggu, Kerobokan, Badung, Bali 80361
+   - Area Served: Canggu, Berawa, Pererenan, Batu Bolong, Echo Beach, Kerobokan, Seminyak
+   - Hours: Monday–Saturday 09:00–20:00, Sunday 10:00–18:00
+   - Google Maps: https://maps.google.com/?q=iSmart+Canggu+Bali
+   - Highlights: Fast walk-ins for tourists, digital nomads, and expats; same-day screen & battery swaps; rapid mobile villa technician dispatch.
+
+2. **Bale Bali (Central Workshop & Diagnostic Lab)**
+   - Address: Jl. Pulau Misol No. 106, Dauh Puri Kauh, Denpasar, Bali 80113
+   - Area Served: Denpasar, Sanur, Kuta, Jimbaran, Uluwatu, Ubud
+   - Hours: Monday–Saturday 09:00–21:00, Sunday 09:00–18:00
+   - Google Maps: https://maps.google.com/?q=Bali+Phone+Repair+Jl+Pulau+Misol+106+Denpasar
+   - Highlights: High-capacity workshop with ultrasonic cleaning baths, microscopes, logic board micro-soldering, and extensive OEM spare parts inventory.
+
+3. **iSmart Teuku Umar (Tech Corridor Branch)**
+   - Address: Jl. Teuku Umar No. 241, Dauh Puri Kauh, Denpasar Barat, Bali 80113
+   - Area Served: Teuku Umar tech strip, Denpasar, Renon, Kuta
+   - Hours: Monday–Saturday 09:00–21:00
+   - Google Maps: https://maps.google.com/?q=iSmart+Teuku+Umar+Denpasar
+   - Highlights: Specialized equipment for back glass laser separation, component-level micro-soldering, and iPad display laminating.
+
+## Core Services & Capabilities
+
+- **iPhone Repair Bali**: Same-day screen replacement (OLED/LCD), genuine battery replacement, charging port repair, camera lens & glass repair, speaker/mic replacement, water damage treatment.
+- **Samsung & Android Phone Repair**: AMOLED display replacement for Samsung Galaxy S and Z series, Xiaomi, Oppo, Google Pixel, Vivo, Asus, OnePlus.
+- **MacBook & Laptop Repair**: MacBook Pro & Air M1/M2/M3/Intel repair, screen replacement, logic board diagnosis & repair, battery replacement, thermal paste renewal, keyboard & trackpad replacement.
+- **iPad & Tablet Repair**: Glass digitizer & LCD replacement, battery swap, charging port and corrosion cleaning.
+- **Emergency Saltwater & Liquid Damage Recovery**: Chemical immersion, ultrasonic bath cleaning, board micro-soldering, and NVMe SSD / internal NAND data recovery for devices exposed to ocean water or pools.
+- **Mobile On-Site Villa / Hotel Repair**: Dedicated motorcycle technicians dispatch directly to villas, hotels, cafes, and coworking spaces across Bali with complete diagnostic toolsets. Repairs completed in 30–60 minutes right in front of the customer.
+
+## Important Pages
+- Homepage: https://baliphonerepair.com/
+- All Services: https://baliphonerepair.com/services
+- iPhone Repair Bali: https://baliphonerepair.com/services/iphone-repair-bali
+- MacBook Repair Bali: https://baliphonerepair.com/services/macbook-repair-bali
+- Android Repair Bali: https://baliphonerepair.com/services/android-repair-bali
+- Data Recovery Bali: https://baliphonerepair.com/services/data-recovery-bali
+- Service Areas: https://baliphonerepair.com/service-areas
+- Canggu Service Area: https://baliphonerepair.com/service-areas/canggu
+- Denpasar Service Area: https://baliphonerepair.com/service-areas/denpasar
+- Seminyak Service Area: https://baliphonerepair.com/service-areas/seminyak
+- Ubud Service Area: https://baliphonerepair.com/service-areas/ubud
+- Blog & Repair Guides: https://baliphonerepair.com/blog
+
+## Verification & Crawling
+- Sitemap: https://baliphonerepair.com/sitemap.xml
+- Robots: https://baliphonerepair.com/robots.txt
+- IndexNow Verification: https://baliphonerepair.com/4c3b28b78912443a9d94943fcf13db1b.txt

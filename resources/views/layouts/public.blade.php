@@ -51,7 +51,7 @@
             'telephone' => $phone,
             'email' => $email,
             'address' => $siteSettings['address'] ?? 'Bali, Indonesia',
-            'openingHours' => $siteSettings['opening_hours'] ?? '',
+            'openingHours' => (!empty($siteSettings['opening_hours']) && !str_contains($siteSettings['opening_hours'], 'Mo-Sa')) ? $siteSettings['opening_hours'] : 'Mo-Su 09:00-21:00',
         ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
     </script>
     @stack('schema')

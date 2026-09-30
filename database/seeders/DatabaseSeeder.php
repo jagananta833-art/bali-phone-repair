@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
             'whatsapp' => '6281929164999',
             'address' => 'Jl. Pulau Misol No.106, Dauh Puri Kauh, Denpasar, Bali 80113',
             'email' => 'hello@baliphonerepair.com',
-            'opening_hours' => 'Mo-Sa 09:00-21:00',
+            'opening_hours' => 'Mo-Su 09:00-21:00',
             'hero_title' => 'iPhone, Android, MacBook, or laptop issue? We can come to your location.',
             'hero_subtitle' => 'We help with repairs, diagnostics, buying and selling phones and MacBooks, plus MacBook rentals for daily work, events, or urgent needs while you are in Bali.',
             'company_description' => 'Fast device repair, home service, buy and sell, and MacBook rental across Bali.',

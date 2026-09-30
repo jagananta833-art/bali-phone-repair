@@ -7,7 +7,9 @@
         ? '+'.preg_replace('/\D+/', '', $phone)
         : null;
     $email = $siteSettings['email'] ?? 'hello@baliphonerepair.com';
-    $openingHours = $siteSettings['opening_hours'] ?? 'Mo-Sa 09:00-21:00';
+    $openingHours = (!empty($siteSettings['opening_hours']) && !str_contains($siteSettings['opening_hours'], 'Mo-Sa'))
+        ? $siteSettings['opening_hours']
+        : 'Open Daily (Mon–Sun): 09:00–21:00';
     $address = $siteSettings['address'] ?? 'Jl. Pulau Misol No.106, Dauh Puri Kauh, Denpasar, Bali 80113';
     $defaultTitle = 'Phone, iPhone, Samsung & MacBook Repair Bali | Bali Phone Repair';
     $title = !empty($siteSettings['default_meta_title']) && !str_contains($siteSettings['default_meta_title'], 'Rental Device')
@@ -1104,15 +1106,9 @@
         'openingHoursSpecification' => [
           [
             '@'.'type' => 'OpeningHoursSpecification',
-            'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
             'opens' => '09:00',
             'closes' => '21:00',
-          ],
-          [
-            '@'.'type' => 'OpeningHoursSpecification',
-            'dayOfWeek' => ['Sunday'],
-            'opens' => '09:00',
-            'closes' => '18:00',
           ],
         ],
         'areaServed' => [
@@ -1149,15 +1145,9 @@
             'openingHoursSpecification' => [
               [
                 '@'.'type' => 'OpeningHoursSpecification',
-                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
                 'opens' => '09:00',
-                'closes' => '20:00',
-              ],
-              [
-                '@'.'type' => 'OpeningHoursSpecification',
-                'dayOfWeek' => ['Sunday'],
-                'opens' => '10:00',
-                'closes' => '18:00',
+                'closes' => '21:00',
               ],
             ],
           ],
@@ -1182,15 +1172,9 @@
             'openingHoursSpecification' => [
               [
                 '@'.'type' => 'OpeningHoursSpecification',
-                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
                 'opens' => '09:00',
                 'closes' => '21:00',
-              ],
-              [
-                '@'.'type' => 'OpeningHoursSpecification',
-                'dayOfWeek' => ['Sunday'],
-                'opens' => '09:00',
-                'closes' => '18:00',
               ],
             ],
           ],
@@ -1215,7 +1199,7 @@
             'openingHoursSpecification' => [
               [
                 '@'.'type' => 'OpeningHoursSpecification',
-                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
                 'opens' => '09:00',
                 'closes' => '21:00',
               ],
@@ -1690,7 +1674,7 @@
             <strong>iSmart Canggu is a certified Bali Phone Repair branch</strong> conveniently positioned for tourists, expats, and digital nomads in Canggu, Berawa, Batu Bolong, and Pererenan. Walk-ins welcome for express same-day repairs or schedule an in-villa technician visit.
           </p>
           <div style="font-size: 0.85rem; color: var(--color-gray-700); margin-bottom: 6px;">
-            ⏰ <strong>Hours:</strong> Mon–Sat: 09:00–20:00 | Sun: 10:00–18:00
+            ⏰ <strong>Hours:</strong> Open Daily (Mon–Sun): 09:00–21:00 (No Days Off)
           </div>
           <div style="font-size: 0.85rem; color: var(--color-gray-700); margin-bottom: 16px;">
             🛵 <strong>Service:</strong> Walk-in Workshop • In-Villa Service • Courier Pickup
@@ -1718,7 +1702,7 @@
             <strong>Bale Bali is the flagship central workshop of Bali Phone Repair</strong>, housing high-grade diagnostic benches, ultrasonic liquid damage restoration tanks, and extensive spare parts stock for iPhones, MacBooks, and Android flagships.
           </p>
           <div style="font-size: 0.85rem; color: var(--color-gray-700); margin-bottom: 6px;">
-            ⏰ <strong>Hours:</strong> Mon–Sat: 09:00–21:00 | Sun: 09:00–18:00
+            ⏰ <strong>Hours:</strong> Open Daily (Mon–Sun): 09:00–21:00 (No Days Off)
           </div>
           <div style="font-size: 0.85rem; color: var(--color-gray-700); margin-bottom: 16px;">
             🛵 <strong>Service:</strong> Walk-in Workshop • Advanced Diagnostics • Data Recovery
@@ -1746,7 +1730,7 @@
             <strong>iSmart Teuku Umar is a Bali Phone Repair branch</strong> in Bali’s premier gadget corridor. Specializing in precision logic board micro-soldering, back glass laser separation, and iPad screen laminating.
           </p>
           <div style="font-size: 0.85rem; color: var(--color-gray-700); margin-bottom: 6px;">
-            ⏰ <strong>Hours:</strong> Mon–Sat: 09:00–21:00
+            ⏰ <strong>Hours:</strong> Open Daily (Mon–Sun): 09:00–21:00 (No Days Off)
           </div>
           <div style="font-size: 0.85rem; color: var(--color-gray-700); margin-bottom: 16px;">
             🛵 <strong>Service:</strong> Walk-in Workshop • Board Micro-Soldering • Laser Glass

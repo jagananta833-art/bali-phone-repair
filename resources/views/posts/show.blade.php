@@ -184,27 +184,27 @@
 @push('schema')
 @php
     $articleSchema = array_filter([
-        '@context' => 'https://schema.org',
-        '@type' => 'Article',
-        '@id' => $postUrl.'#article',
+        '@'.'context' => 'https://schema.org',
+        '@'.'type' => 'Article',
+        '@'.'id' => $postUrl.'#article',
         'headline' => $post->title,
         'description' => $post->meta_description ?: $post->excerpt,
         'image' => [$postImage],
         'url' => $postUrl,
         'mainEntityOfPage' => [
-            '@type' => 'WebPage',
-            '@id' => $postUrl,
+            '@'.'type' => 'WebPage',
+            '@'.'id' => $postUrl,
         ],
         'author' => [
-            '@type' => $post->author ? 'Person' : 'Organization',
+            '@'.'type' => $post->author ? 'Person' : 'Organization',
             'name' => $post->author_name ?? $post->author ?? $post->user->name ?? 'Administrator',
         ],
         'publisher' => [
-            '@type' => 'Organization',
-            '@id' => url('/').'#localbusiness',
+            '@'.'type' => 'Organization',
+            '@'.'id' => url('/').'#localbusiness',
             'name' => $businessName,
             'logo' => [
-                '@type' => 'ImageObject',
+                '@'.'type' => 'ImageObject',
                 'url' => asset('assets/bali-phone-repair/logo-optimized.jpg'),
             ],
         ],
@@ -216,12 +216,12 @@
     ], fn ($value) => $value !== null && $value !== '');
 
     $breadcrumbSchema = [
-        '@context' => 'https://schema.org',
-        '@type' => 'BreadcrumbList',
+        '@'.'context' => 'https://schema.org',
+        '@'.'type' => 'BreadcrumbList',
         'itemListElement' => [
-            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => route('home')],
-            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Blog', 'item' => route('blog')],
-            ['@type' => 'ListItem', 'position' => 3, 'name' => $post->title, 'item' => $postUrl],
+            ['@'.'type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => route('home')],
+            ['@'.'type' => 'ListItem', 'position' => 2, 'name' => 'Blog', 'item' => route('blog')],
+            ['@'.'type' => 'ListItem', 'position' => 3, 'name' => $post->title, 'item' => $postUrl],
         ],
     ];
 @endphp

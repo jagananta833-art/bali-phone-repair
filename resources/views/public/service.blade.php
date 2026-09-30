@@ -158,36 +158,36 @@
 
 @push('schema')
 <script type="application/ld+json">{!! json_encode([
-    '@context' => 'https://schema.org',
-    '@type' => 'Service',
-    '@id' => $serviceUrl.'#service',
+    '@'.'context' => 'https://schema.org',
+    '@'.'type' => 'Service',
+    '@'.'id' => $serviceUrl.'#service',
     'name' => $service->name,
     'description' => $service->meta_description ?: $service->short_description,
     'image' => asset('assets/bali-phone-repair/'.$primaryImage),
-    'provider' => ['@id' => url('/').'#localbusiness'],
+    'provider' => ['@'.'id' => url('/').'#localbusiness'],
     'areaServed' => $service->serviceAreas->map(fn ($area) => [
-        '@type' => 'AdministrativeArea',
+        '@'.'type' => 'AdministrativeArea',
         'name' => $area->name,
     ])->values()->all(),
     'url' => $serviceUrl,
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
 <script type="application/ld+json">{!! json_encode([
-    '@context' => 'https://schema.org',
-    '@type' => 'BreadcrumbList',
+    '@'.'context' => 'https://schema.org',
+    '@'.'type' => 'BreadcrumbList',
     'itemListElement' => [
-        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => route('home')],
-        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Services', 'item' => route('services.index')],
-        ['@type' => 'ListItem', 'position' => 3, 'name' => $service->name, 'item' => $serviceUrl],
+        ['@'.'type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => route('home')],
+        ['@'.'type' => 'ListItem', 'position' => 2, 'name' => 'Services', 'item' => route('services.index')],
+        ['@'.'type' => 'ListItem', 'position' => 3, 'name' => $service->name, 'item' => $serviceUrl],
     ],
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
 @if($service->faqs->isNotEmpty())
 <script type="application/ld+json">{!! json_encode([
-    '@context' => 'https://schema.org',
-    '@type' => 'FAQPage',
+    '@'.'context' => 'https://schema.org',
+    '@'.'type' => 'FAQPage',
     'mainEntity' => $service->faqs->map(fn ($faq) => [
-        '@type' => 'Question',
+        '@'.'type' => 'Question',
         'name' => $faq->question,
-        'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq->answer],
+        'acceptedAnswer' => ['@'.'type' => 'Answer', 'text' => $faq->answer],
     ])->values()->all(),
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
 @endif

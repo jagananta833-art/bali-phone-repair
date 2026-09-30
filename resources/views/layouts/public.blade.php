@@ -42,9 +42,9 @@
     @stack('styles')
     <script type="application/ld+json">
         {!! json_encode([
-            '@context' => 'https://schema.org',
-            '@type' => 'LocalBusiness',
-            '@id' => url('/').'#localbusiness',
+            '@'.'context' => 'https://schema.org',
+            '@'.'type' => 'LocalBusiness',
+            '@'.'id' => url('/').'#localbusiness',
             'name' => $businessName,
             'url' => url('/'),
             'image' => asset($assetBase.'android-buy-sell-optimized.jpg'),

@@ -166,44 +166,44 @@
 @push('schema')
 @php
     $localBusiness = array_filter([
-        '@context' => 'https://schema.org',
-        '@type' => 'LocalBusiness',
-        '@id' => $canonicalUrl.'#localbusiness',
+        '@'.'context' => 'https://schema.org',
+        '@'.'type' => 'LocalBusiness',
+        '@'.'id' => $canonicalUrl.'#localbusiness',
         'name' => $location->name,
         'url' => $canonicalUrl,
         'image' => asset('assets/bali-phone-repair/'.$heroImage),
         'telephone' => $phone ?: null,
         'email' => $location->email ?: null,
         'address' => $location->address ? array_filter([
-            '@type' => 'PostalAddress',
+            '@'.'type' => 'PostalAddress',
             'streetAddress' => $location->address,
             'postalCode' => $location->postcode ?: null,
             'addressRegion' => 'Bali',
             'addressCountry' => 'ID',
         ]) : null,
         'geo' => $location->latitude !== null && $location->longitude !== null ? [
-            '@type' => 'GeoCoordinates',
+            '@'.'type' => 'GeoCoordinates',
             'latitude' => (float) $location->latitude,
             'longitude' => (float) $location->longitude,
         ] : null,
         'openingHours' => $location->opening_hours ?: null,
     ], fn ($value) => $value !== null && $value !== '');
     $breadcrumbSchema = [
-        '@context' => 'https://schema.org',
-        '@type' => 'BreadcrumbList',
+        '@'.'context' => 'https://schema.org',
+        '@'.'type' => 'BreadcrumbList',
         'itemListElement' => [
-            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => route('home')],
-            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Locations', 'item' => route('areas.index')],
-            ['@type' => 'ListItem', 'position' => 3, 'name' => $location->name, 'item' => $canonicalUrl],
+            ['@'.'type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => route('home')],
+            ['@'.'type' => 'ListItem', 'position' => 2, 'name' => 'Locations', 'item' => route('areas.index')],
+            ['@'.'type' => 'ListItem', 'position' => 3, 'name' => $location->name, 'item' => $canonicalUrl],
         ],
     ];
     $faqSchema = [
-        '@context' => 'https://schema.org',
-        '@type' => 'FAQPage',
+        '@'.'context' => 'https://schema.org',
+        '@'.'type' => 'FAQPage',
         'mainEntity' => $location->faqs->map(fn ($faq) => [
-            '@type' => 'Question',
+            '@'.'type' => 'Question',
             'name' => $faq->question,
-            'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq->answer],
+            'acceptedAnswer' => ['@'.'type' => 'Answer', 'text' => $faq->answer],
         ])->values(),
     ];
 @endphp

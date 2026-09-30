@@ -66,14 +66,14 @@
 @push('schema')
 @php
 $collectionSchema=[
-'@context'=>'https://schema.org',
-'@type'=>'CollectionPage',
+'@'.'context'=>'https://schema.org',
+'@'.'type'=>'CollectionPage',
 'name'=>'Device Repair Blog',
 'url'=>request()->fullUrl(),
 'mainEntity'=>[
-'@type'=>'ItemList',
+'@'.'type'=>'ItemList',
 'itemListElement'=>$posts->values()->map(fn($p,$i)=>[
-'@type'=>'ListItem',
+'@'.'type'=>'ListItem',
 'position'=>$i+1,
 'url'=>route('posts.show',$p),
 'name'=>$p->title,
@@ -81,11 +81,11 @@ $collectionSchema=[
 ],
 ];
 $breadcrumbSchema=[
-'@context'=>'https://schema.org',
-'@type'=>'BreadcrumbList',
+'@'.'context'=>'https://schema.org',
+'@'.'type'=>'BreadcrumbList',
 'itemListElement'=>[
-['@type'=>'ListItem','position'=>1,'name'=>'Home','item'=>route('home')],
-['@type'=>'ListItem','position'=>2,'name'=>'Blog','item'=>route('blog')],
+['@'.'type'=>'ListItem','position'=>1,'name'=>'Home','item'=>route('home')],
+['@'.'type'=>'ListItem','position'=>2,'name'=>'Blog','item'=>route('blog')],
 ]
 ];
 @endphp

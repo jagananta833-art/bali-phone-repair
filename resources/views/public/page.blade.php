@@ -57,6 +57,6 @@
     </section>
 </main>
 @push('schema')
-<script type="application/ld+json">{!! json_encode(['@context'=>'https://schema.org','@type'=>'BreadcrumbList','itemListElement'=>[['@type'=>'ListItem','position'=>1,'name'=>'Home','item'=>route('home')],['@type'=>'ListItem','position'=>2,'name'=>$page->title,'item'=>route('pages.show',$page)]]], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+<script type="application/ld+json">{!! json_encode(['@'.'context'=>'https://schema.org','@'.'type'=>'BreadcrumbList','itemListElement'=>[['@'.'type'=>'ListItem','position'=>1,'name'=>'Home','item'=>route('home')],['@'.'type'=>'ListItem','position'=>2,'name'=>$page->title,'item'=>route('pages.show',$page)]]], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
 @endpush
 @endsection

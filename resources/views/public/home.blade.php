@@ -1063,170 +1063,168 @@
   </style>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "{{ url('/') }}#organization",
-        "name": "{{ $businessName }}",
-        "legalName": "Bali Phone Repair & Technology Care",
-        "url": "{{ url('/') }}",
-        "logo": "{{ asset($assetBase.'logo-optimized.jpg') }}",
-        "email": "{{ $email }}",
-        "telephone": "{{ $phone }}",
-        "sameAs": [
-          "https://wa.me/{{ $whatsapp }}"
-        ]
-      },
-      {
-        "@type": ["LocalBusiness", "MobilePhoneStore"],
-        "@id": "{{ url('/') }}#business",
-        "name": "{{ $businessName }}",
-        "url": "{{ url('/') }}",
-        "image": "{{ $ogImage }}",
-        "description": "Professional electronics repair service in Bali specializing in iPhone, Samsung, MacBook, iPad, and Android repair with certified walk-in workshops in Canggu and Denpasar, plus on-site villa service.",
-        "telephone": "{{ $phone }}",
-        "email": "{{ $email }}",
-        "priceRange": "$$",
-        "hasMap": "https://maps.google.com/?q=Bali+Phone+Repair+Denpasar",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Jl. Pulau Misol No.106, Dauh Puri Kauh",
-          "addressLocality": "Denpasar",
-          "addressRegion": "Bali",
-          "postalCode": "80113",
-          "addressCountry": "ID"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": -8.6784,
-          "longitude": 115.2075
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "09:00",
-            "closes": "21:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Sunday"],
-            "opens": "09:00",
-            "closes": "18:00"
-          }
+  {!! json_encode([
+    '@'.'context' => 'https://schema.org',
+    '@'.'graph' => [
+      [
+        '@'.'type' => 'Organization',
+        '@'.'id' => url('/').'#organization',
+        'name' => $businessName,
+        'legalName' => 'Bali Phone Repair & Technology Care',
+        'url' => url('/'),
+        'logo' => asset($assetBase.'logo-optimized.jpg'),
+        'email' => $email,
+        'telephone' => $phone,
+        'sameAs' => ['https://wa.me/'.$whatsapp],
+      ],
+      [
+        '@'.'type' => ['LocalBusiness', 'MobilePhoneStore'],
+        '@'.'id' => url('/').'#business',
+        'name' => $businessName,
+        'url' => url('/'),
+        'image' => $ogImage,
+        'description' => 'Professional electronics repair service in Bali specializing in iPhone, Samsung, MacBook, iPad, and Android repair with certified walk-in workshops in Canggu and Denpasar, plus on-site villa service.',
+        'telephone' => $phone,
+        'email' => $email,
+        'priceRange' => '$$',
+        'hasMap' => 'https://maps.google.com/?q=Bali+Phone+Repair+Denpasar',
+        'address' => [
+          '@'.'type' => 'PostalAddress',
+          'streetAddress' => 'Jl. Pulau Misol No.106, Dauh Puri Kauh',
+          'addressLocality' => 'Denpasar',
+          'addressRegion' => 'Bali',
+          'postalCode' => '80113',
+          'addressCountry' => 'ID',
         ],
-        "areaServed": [
-          { "@type": "AdministrativeArea", "name": "Canggu" },
-          { "@type": "AdministrativeArea", "name": "Pererenan" },
-          { "@type": "AdministrativeArea", "name": "Berawa" },
-          { "@type": "AdministrativeArea", "name": "Seminyak" },
-          { "@type": "AdministrativeArea", "name": "Kuta" },
-          { "@type": "AdministrativeArea", "name": "Ubud" },
-          { "@type": "AdministrativeArea", "name": "Sanur" },
-          { "@type": "AdministrativeArea", "name": "Denpasar" },
-          { "@type": "AdministrativeArea", "name": "Jimbaran" },
-          { "@type": "AdministrativeArea", "name": "Uluwatu" }
+        'geo' => [
+          '@'.'type' => 'GeoCoordinates',
+          'latitude' => -8.6784,
+          'longitude' => 115.2075,
         ],
-        "subOrganization": [
-          {
-            "@type": ["LocalBusiness", "MobilePhoneStore"],
-            "@id": "{{ url('/') }}#branch-ismart-canggu",
-            "name": "iSmart Canggu (Bali Phone Repair)",
-            "alternateName": "iSmart Canggu Workshop",
-            "url": "{{ url('/service-areas/canggu') }}",
-            "telephone": "{{ $phone }}",
-            "priceRange": "$$",
-            "description": "iSmart Canggu is a certified Bali Phone Repair branch serving tourists, expats, and digital nomads in Canggu, Berawa, Batu Bolong, and Pererenan with walk-in repairs and rapid mobile villa technician dispatch.",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Jl. Raya Canggu, Kerobokan",
-              "addressLocality": "Canggu / Kerobokan",
-              "addressRegion": "Bali",
-              "postalCode": "80361",
-              "addressCountry": "ID"
-            },
-            "hasMap": "https://maps.google.com/?q=iSmart+Canggu+Bali",
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                "opens": "09:00",
-                "closes": "20:00"
-              },
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Sunday"],
-                "opens": "10:00",
-                "closes": "18:00"
-              }
-            ]
-          },
-          {
-            "@type": ["LocalBusiness", "MobilePhoneStore"],
-            "@id": "{{ url('/') }}#branch-bale-bali",
-            "name": "Bale Bali (Central Workshop & Lab)",
-            "alternateName": "Bale Bali - Bali Phone Repair Headquarter",
-            "url": "{{ url('/service-areas/denpasar') }}",
-            "telephone": "{{ $phone }}",
-            "priceRange": "$$",
-            "description": "Bale Bali is the flagship central workshop of Bali Phone Repair in Denpasar, equipped with precision micro-soldering, ultrasonic cleaning tanks, and extensive spare parts stock.",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Jl. Pulau Misol No. 106, Dauh Puri Kauh",
-              "addressLocality": "Denpasar",
-              "addressRegion": "Bali",
-              "postalCode": "80113",
-              "addressCountry": "ID"
-            },
-            "hasMap": "https://maps.google.com/?q=Bali+Phone+Repair+Jl+Pulau+Misol+106+Denpasar",
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                "opens": "09:00",
-                "closes": "21:00"
-              },
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Sunday"],
-                "opens": "09:00",
-                "closes": "18:00"
-              }
-            ]
-          },
-          {
-            "@type": ["LocalBusiness", "MobilePhoneStore"],
-            "@id": "{{ url('/') }}#branch-ismart-teuku-umar",
-            "name": "iSmart Teuku Umar",
-            "alternateName": "iSmart Teuku Umar (Tech Strip Branch)",
-            "url": "{{ url('/service-areas/denpasar') }}",
-            "telephone": "{{ $phone }}",
-            "priceRange": "$$",
-            "description": "iSmart Teuku Umar is a Bali Phone Repair branch located in Denpasar's primary electronics tech street, specializing in laser rear glass separation, logic board repair, and screen replacement.",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Jl. Teuku Umar No. 241, Dauh Puri Kauh",
-              "addressLocality": "Denpasar Barat",
-              "addressRegion": "Bali",
-              "postalCode": "80113",
-              "addressCountry": "ID"
-            },
-            "hasMap": "https://maps.google.com/?q=iSmart+Teuku+Umar+Denpasar",
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                "opens": "09:00",
-                "closes": "21:00"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+        'openingHoursSpecification' => [
+          [
+            '@'.'type' => 'OpeningHoursSpecification',
+            'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            'opens' => '09:00',
+            'closes' => '21:00',
+          ],
+          [
+            '@'.'type' => 'OpeningHoursSpecification',
+            'dayOfWeek' => ['Sunday'],
+            'opens' => '09:00',
+            'closes' => '18:00',
+          ],
+        ],
+        'areaServed' => [
+          ['@'.'type' => 'AdministrativeArea', 'name' => 'Canggu'],
+          ['@'.'type' => 'AdministrativeArea', 'name' => 'Pererenan'],
+          ['@'.'type' => 'AdministrativeArea', 'name' => 'Berawa'],
+          ['@'.'type' => 'AdministrativeArea', 'name' => 'Seminyak'],
+          ['@'.'type' => 'AdministrativeArea', 'name' => 'Kuta'],
+          ['@'.'type' => 'AdministrativeArea', 'name' => 'Ubud'],
+          ['@'.'type' => 'AdministrativeArea', 'name' => 'Sanur'],
+          ['@'.'type' => 'AdministrativeArea', 'name' => 'Denpasar'],
+          ['@'.'type' => 'AdministrativeArea', 'name' => 'Jimbaran'],
+          ['@'.'type' => 'AdministrativeArea', 'name' => 'Uluwatu'],
+        ],
+        'subOrganization' => [
+          [
+            '@'.'type' => ['LocalBusiness', 'MobilePhoneStore'],
+            '@'.'id' => url('/').'#branch-ismart-canggu',
+            'name' => 'iSmart Canggu (Bali Phone Repair)',
+            'alternateName' => 'iSmart Canggu Workshop',
+            'url' => url('/service-areas/canggu'),
+            'telephone' => $phone,
+            'priceRange' => '$$',
+            'description' => 'iSmart Canggu is a certified Bali Phone Repair branch serving tourists, expats, and digital nomads in Canggu, Berawa, Batu Bolong, and Pererenan with walk-in repairs and rapid mobile villa technician dispatch.',
+            'address' => [
+              '@'.'type' => 'PostalAddress',
+              'streetAddress' => 'Jl. Raya Canggu, Kerobokan',
+              'addressLocality' => 'Canggu / Kerobokan',
+              'addressRegion' => 'Bali',
+              'postalCode' => '80361',
+              'addressCountry' => 'ID',
+            ],
+            'hasMap' => 'https://maps.google.com/?q=iSmart+Canggu+Bali',
+            'openingHoursSpecification' => [
+              [
+                '@'.'type' => 'OpeningHoursSpecification',
+                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                'opens' => '09:00',
+                'closes' => '20:00',
+              ],
+              [
+                '@'.'type' => 'OpeningHoursSpecification',
+                'dayOfWeek' => ['Sunday'],
+                'opens' => '10:00',
+                'closes' => '18:00',
+              ],
+            ],
+          ],
+          [
+            '@'.'type' => ['LocalBusiness', 'MobilePhoneStore'],
+            '@'.'id' => url('/').'#branch-bale-bali',
+            'name' => 'Bale Bali (Central Workshop & Lab)',
+            'alternateName' => 'Bale Bali - Bali Phone Repair Headquarter',
+            'url' => url('/service-areas/denpasar'),
+            'telephone' => $phone,
+            'priceRange' => '$$',
+            'description' => 'Bale Bali is the flagship central workshop of Bali Phone Repair in Denpasar, equipped with precision micro-soldering, ultrasonic cleaning tanks, and extensive spare parts stock.',
+            'address' => [
+              '@'.'type' => 'PostalAddress',
+              'streetAddress' => 'Jl. Pulau Misol No. 106, Dauh Puri Kauh',
+              'addressLocality' => 'Denpasar',
+              'addressRegion' => 'Bali',
+              'postalCode' => '80113',
+              'addressCountry' => 'ID',
+            ],
+            'hasMap' => 'https://maps.google.com/?q=Bali+Phone+Repair+Jl+Pulau+Misol+106+Denpasar',
+            'openingHoursSpecification' => [
+              [
+                '@'.'type' => 'OpeningHoursSpecification',
+                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                'opens' => '09:00',
+                'closes' => '21:00',
+              ],
+              [
+                '@'.'type' => 'OpeningHoursSpecification',
+                'dayOfWeek' => ['Sunday'],
+                'opens' => '09:00',
+                'closes' => '18:00',
+              ],
+            ],
+          ],
+          [
+            '@'.'type' => ['LocalBusiness', 'MobilePhoneStore'],
+            '@'.'id' => url('/').'#branch-ismart-teuku-umar',
+            'name' => 'iSmart Teuku Umar',
+            'alternateName' => 'iSmart Teuku Umar (Tech Strip Branch)',
+            'url' => url('/service-areas/denpasar'),
+            'telephone' => $phone,
+            'priceRange' => '$$',
+            'description' => "iSmart Teuku Umar is a Bali Phone Repair branch located in Denpasar's primary electronics tech street, specializing in laser rear glass separation, logic board repair, and screen replacement.",
+            'address' => [
+              '@'.'type' => 'PostalAddress',
+              'streetAddress' => 'Jl. Teuku Umar No. 241, Dauh Puri Kauh',
+              'addressLocality' => 'Denpasar Barat',
+              'addressRegion' => 'Bali',
+              'postalCode' => '80113',
+              'addressCountry' => 'ID',
+            ],
+            'hasMap' => 'https://maps.google.com/?q=iSmart+Teuku+Umar+Denpasar',
+            'openingHoursSpecification' => [
+              [
+                '@'.'type' => 'OpeningHoursSpecification',
+                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                'opens' => '09:00',
+                'closes' => '21:00',
+              ],
+            ],
+          ],
+        ],
+      ],
+    ],
+  ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
   </script>
 </head>
 <body data-page-type="home">

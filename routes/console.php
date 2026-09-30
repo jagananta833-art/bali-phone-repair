@@ -26,7 +26,6 @@ Artisan::command('seo:indexnow', function () {
     $payload = [
         'host' => $host,
         'key' => $key,
-        'keyLocation' => $keyLocation,
         'urlList' => $urls,
     ];
 

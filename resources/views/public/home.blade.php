@@ -1135,7 +1135,7 @@
             "@id": "{{ url('/') }}#branch-ismart-canggu",
             "name": "iSmart Canggu (Bali Phone Repair)",
             "alternateName": "iSmart Canggu Workshop",
-            "url": "{{ route('areas.show', 'canggu') }}",
+            "url": "{{ url('/service-areas/canggu') }}",
             "telephone": "{{ $phone }}",
             "priceRange": "$$",
             "description": "iSmart Canggu is a certified Bali Phone Repair branch serving tourists, expats, and digital nomads in Canggu, Berawa, Batu Bolong, and Pererenan with walk-in repairs and rapid mobile villa technician dispatch.",
@@ -1168,7 +1168,7 @@
             "@id": "{{ url('/') }}#branch-bale-bali",
             "name": "Bale Bali (Central Workshop & Lab)",
             "alternateName": "Bale Bali - Bali Phone Repair Headquarter",
-            "url": "{{ route('areas.show', 'denpasar') }}",
+            "url": "{{ url('/service-areas/denpasar') }}",
             "telephone": "{{ $phone }}",
             "priceRange": "$$",
             "description": "Bale Bali is the flagship central workshop of Bali Phone Repair in Denpasar, equipped with precision micro-soldering, ultrasonic cleaning tanks, and extensive spare parts stock.",
@@ -1201,7 +1201,7 @@
             "@id": "{{ url('/') }}#branch-ismart-teuku-umar",
             "name": "iSmart Teuku Umar",
             "alternateName": "iSmart Teuku Umar (Tech Strip Branch)",
-            "url": "{{ route('areas.show', 'denpasar') }}",
+            "url": "{{ url('/service-areas/denpasar') }}",
             "telephone": "{{ $phone }}",
             "priceRange": "$$",
             "description": "iSmart Teuku Umar is a Bali Phone Repair branch located in Denpasar's primary electronics tech street, specializing in laser rear glass separation, logic board repair, and screen replacement.",
@@ -1701,7 +1701,7 @@
             <a href="https://wa.me/{{ $whatsapp }}?text=Hi%20iSmart%20Canggu%2C%20I%20need%20repair%20assistance" target="_blank" rel="noreferrer" style="flex: 1; text-align: center; background: #2563eb; color: #ffffff; padding: 10px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none;">
               <i class="fa-brands fa-whatsapp"></i> Chat Canggu
             </a>
-            <a href="{{ route('areas.show', 'canggu') }}" style="text-align: center; background: var(--color-gray-100); color: var(--color-gray-900); padding: 10px 14px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none; border: 1px solid var(--color-gray-200);">
+            <a href="{{ url('/service-areas/canggu') }}" style="text-align: center; background: var(--color-gray-100); color: var(--color-gray-900); padding: 10px 14px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none; border: 1px solid var(--color-gray-200);">
               Area Info
             </a>
           </div>
@@ -1729,7 +1729,7 @@
             <a href="https://wa.me/{{ $whatsapp }}?text=Hi%20Bale%20Bali%20Workshop%2C%20I%20have%20a%20device%20repair%20inquiry" target="_blank" rel="noreferrer" style="flex: 1; text-align: center; background: #0f172a; color: #ffffff; padding: 10px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none;">
               <i class="fa-brands fa-whatsapp"></i> Chat Workshop
             </a>
-            <a href="{{ route('areas.show', 'denpasar') }}" style="text-align: center; background: var(--color-gray-100); color: var(--color-gray-900); padding: 10px 14px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none; border: 1px solid var(--color-gray-200);">
+            <a href="{{ url('/service-areas/denpasar') }}" style="text-align: center; background: var(--color-gray-100); color: var(--color-gray-900); padding: 10px 14px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none; border: 1px solid var(--color-gray-200);">
               Area Info
             </a>
           </div>
@@ -1757,7 +1757,7 @@
             <a href="https://wa.me/{{ $whatsapp }}?text=Hi%20iSmart%20Teuku%20Umar%2C%20I%20need%20board%20or%20screen%20repair" target="_blank" rel="noreferrer" style="flex: 1; text-align: center; background: #0f172a; color: #ffffff; padding: 10px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none;">
               <i class="fa-brands fa-whatsapp"></i> Chat Teuku Umar
             </a>
-            <a href="{{ route('areas.show', 'denpasar') }}" style="text-align: center; background: var(--color-gray-100); color: var(--color-gray-900); padding: 10px 14px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none; border: 1px solid var(--color-gray-200);">
+            <a href="{{ url('/service-areas/denpasar') }}" style="text-align: center; background: var(--color-gray-100); color: var(--color-gray-900); padding: 10px 14px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none; border: 1px solid var(--color-gray-200);">
               Area Info
             </a>
           </div>

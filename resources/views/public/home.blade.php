@@ -49,6 +49,7 @@
   <meta name="description" content="{{ $description }}" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="{{ url()->current() }}" />
+  <meta name="msvalidate.01" content="FAD0AF8AFEA125617B8475FC5EFFA76F" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="{{ $businessName }}" />
   <meta property="og:title" content="{{ $ogTitle }}" />

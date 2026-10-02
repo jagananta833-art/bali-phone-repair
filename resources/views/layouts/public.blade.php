@@ -22,6 +22,7 @@
     <meta name="description" content="{{ $description }}">
     <meta name="robots" content="@yield('robots', 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1')">
     <link rel="canonical" href="{{ $canonical }}">
+    <meta name="msvalidate.01" content="FAD0AF8AFEA125617B8475FC5EFFA76F">
     <link rel="alternate" type="application/rss+xml" title="Bali Phone Repair Blog" href="{{ route('rss') }}">
     <meta property="og:title" content="{{ $title }}">
     <meta property="og:description" content="{{ $description }}">

@@ -261,8 +261,8 @@
 <script type="application/ld+json">{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
 @if(!empty($faqItems))
 <script type="application/ld+json">{!! json_encode([
-    '@context' => 'https://schema.org',
-    '@type' => 'FAQPage',
+    '@'.'context' => 'https://schema.org',
+    '@'.'type' => 'FAQPage',
     'mainEntity' => $faqItems,
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
 @endif

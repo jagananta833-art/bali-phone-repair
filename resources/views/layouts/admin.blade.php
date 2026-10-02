@@ -6,7 +6,7 @@
             ['label' => 'Dashboard', 'id_label' => 'Dasbor', 'icon' => 'dashboard', 'url' => route('admin.dashboard'), 'active' => $active('admin.dashboard')],
         ],
         'Website / Situs' => [
-            ['label' => 'Homepage Content', 'id_label' => 'Konten Beranda (Per-Layer)', 'icon' => 'home', 'url' => route('admin.homepage.edit'), 'active' => $active('admin.homepage.*')],
+            ['label' => 'Homepage Content', 'id_label' => 'Konten Beranda (Per-Layer)', 'icon' => 'home', 'url' => route('admin.homepage.index'), 'active' => $active('admin.homepage.*')],
             ['label' => 'Pages', 'id_label' => 'Halaman', 'icon' => 'pages', 'url' => route('admin.pages.index'), 'active' => $active('admin.pages.*')],
             ['label' => 'Services', 'id_label' => 'Layanan', 'icon' => 'services', 'url' => route('admin.services.index'), 'active' => $active('admin.services.*')],
         ],

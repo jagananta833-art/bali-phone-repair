@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\PostRequest;
 use App\Models\Category;
 use App\Models\Post;
+use App\Services\IndexNowService;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -32,7 +33,11 @@ class PostController extends Controller
 
     public function store(PostRequest $request)
     {
-        Post::create($request->prepared());
+        $post = Post::create($request->prepared());
+
+        if ($post->is_published) {
+            IndexNowService::ping(route('posts.show', $post->slug));
+        }
 
         return redirect()->route('admin.posts.index')->with('ok', 'Artikel dibuat.');
     }
@@ -45,6 +50,10 @@ class PostController extends Controller
     public function update(PostRequest $request, Post $post)
     {
         $post->update($request->prepared());
+
+        if ($post->is_published) {
+            IndexNowService::ping(route('posts.show', $post->slug));
+        }
 
         return redirect()->route('admin.posts.index')->with('ok', 'Artikel diperbarui.');
     }

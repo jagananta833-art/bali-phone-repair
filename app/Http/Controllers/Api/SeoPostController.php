@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
+use App\Services\IndexNowService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -80,17 +81,15 @@ class SeoPostController extends Controller
             $excerpt = Str::limit(strip_tags($content), 160, '...');
         }
 
-        // Penanganan slug unik
+        // Penanganan slug unik & pencegahan duplikasi massal
         $baseSlug = $request->filled('slug')
             ? Str::slug((string) $request->input('slug'))
             : Str::slug($title);
 
-        $slug = $baseSlug;
-        $counter = 1;
-        while (Post::where('slug', $slug)->exists()) {
-            $slug = $baseSlug . '-' . $counter;
-            $counter++;
-        }
+        // Cari apakah artikel dengan slug dasar atau judul yang sama sudah ada
+        $existingPost = Post::where('slug', $baseSlug)
+            ->orWhere('title', $title)
+            ->first();
 
         // Penanganan Kategori
         $categoryId = null;
@@ -109,19 +108,22 @@ class SeoPostController extends Controller
             }
             $categoryId = $category->id;
         } else {
-            $categoryId = Category::value('id');
+            $categoryId = $existingPost ? $existingPost->category_id : Category::value('id');
         }
 
         // Penanganan Author
         $userId = User::value('id');
-        $authorName = $request->input('author_name') ?? $request->input('author');
+        $authorName = $request->input('author_name') ?? $request->input('author') ?? ($existingPost ? $existingPost->author_name : 'Bali Phone Repair Team');
 
         // Keywords / Focus Keyword
         $keywordsInput = $request->input('keywords') ?? $request->input('tags') ?? $request->input('focus_keyword');
         $focusKeyword = is_array($keywordsInput) ? implode(', ', $keywordsInput) : (string) $keywordsInput;
+        if (empty($focusKeyword) && $existingPost) {
+            $focusKeyword = $existingPost->focus_keyword;
+        }
 
         // Image
-        $featuredImage = $request->input('image_url') ?? $request->input('featured_image');
+        $featuredImage = $request->input('image_url') ?? $request->input('featured_image') ?? ($existingPost ? $existingPost->featured_image : null);
 
         // Status & Published At
         $status = strtolower((string) $request->input('status', 'published'));
@@ -129,30 +131,56 @@ class SeoPostController extends Controller
 
         $publishedAtRaw = $request->input('published_at') ?? $request->input('date');
         $publishedAt = $isPublished
-            ? ($publishedAtRaw ? date('Y-m-d H:i:s', strtotime((string) $publishedAtRaw)) : now())
+            ? ($publishedAtRaw ? date('Y-m-d H:i:s', strtotime((string) $publishedAtRaw)) : ($existingPost?->published_at ?: now()))
             : null;
 
         $metaTitle = $request->input('meta_title') ?: Str::limit($title, 60, '');
         $metaDescription = $request->input('meta_description') ?: Str::limit(strip_tags($excerpt), 160, '');
 
-        $post = Post::create([
-            'category_id' => $categoryId,
-            'user_id' => $userId,
-            'author_name' => $authorName,
-            'title' => $title,
-            'slug' => $slug,
-            'excerpt' => $excerpt,
-            'content' => $content,
-            'featured_image' => $featuredImage,
-            'featured_image_alt' => $title,
-            'meta_title' => $metaTitle,
-            'meta_description' => $metaDescription,
-            'focus_keyword' => $focusKeyword,
-            'is_published' => $isPublished,
-            'published_at' => $publishedAt,
-        ]);
+        if ($existingPost) {
+            // Update postingan yang sudah ada agar tidak terjadi kanibalisasi duplikat
+            $existingPost->update([
+                'category_id' => $categoryId,
+                'user_id' => $userId,
+                'author_name' => $authorName,
+                'title' => $title,
+                'excerpt' => $excerpt,
+                'content' => $content,
+                'featured_image' => $featuredImage,
+                'featured_image_alt' => $title,
+                'meta_title' => $metaTitle,
+                'meta_description' => $metaDescription,
+                'focus_keyword' => $focusKeyword,
+                'is_published' => $isPublished,
+                'published_at' => $publishedAt,
+            ]);
+            $post = $existingPost;
+            $message = 'Artikel yang sudah ada berhasil diperbarui.';
+        } else {
+            // Buat postingan baru
+            $post = Post::create([
+                'category_id' => $categoryId,
+                'user_id' => $userId,
+                'author_name' => $authorName,
+                'title' => $title,
+                'slug' => $baseSlug,
+                'excerpt' => $excerpt,
+                'content' => $content,
+                'featured_image' => $featuredImage,
+                'featured_image_alt' => $title,
+                'meta_title' => $metaTitle,
+                'meta_description' => $metaDescription,
+                'focus_keyword' => $focusKeyword,
+                'is_published' => $isPublished,
+                'published_at' => $publishedAt,
+            ]);
+            $message = 'Artikel baru berhasil dipublikasikan.';
+        }
 
         $postUrl = route('posts.show', $post->slug);
+
+        // Push URL ke Bing & ChatGPT Search via IndexNow
+        IndexNowService::ping($postUrl);
 
         return response()->json([
             'success' => true,
@@ -160,8 +188,8 @@ class SeoPostController extends Controller
             'post_id' => $post->id,
             'url' => $postUrl,
             'post_url' => $postUrl,
-            'message' => 'Artikel berhasil dipublikasikan.',
-        ], 201);
+            'message' => $message,
+        ], 200);
     }
 
     /**
@@ -212,6 +240,9 @@ class SeoPostController extends Controller
         }
 
         $postUrl = route('posts.show', $post->slug);
+
+        // Push URL ke Bing & ChatGPT Search via IndexNow
+        IndexNowService::ping($postUrl);
 
         return response()->json([
             'success' => true,

@@ -42,8 +42,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::middleware('admin')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
         Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-        Route::get('/homepage', [HomepageController::class, 'edit'])->name('homepage.edit');
-        Route::put('/homepage', [HomepageController::class, 'update'])->name('homepage.update');
+        Route::get('/homepage', [HomepageController::class, 'index'])->name('homepage.index');
+        Route::get('/homepage/sections/{section}', [HomepageController::class, 'editSection'])->name('homepage.sections.edit');
+        Route::put('/homepage/sections/{section}', [HomepageController::class, 'updateSection'])->name('homepage.sections.update');
+        Route::get('/homepage/full', [HomepageController::class, 'edit'])->name('homepage.edit');
+        Route::put('/homepage/full', [HomepageController::class, 'update'])->name('homepage.update');
         Route::resource('pages', PageController::class)->except('show');
         Route::resource('services', ServiceController::class)->except('show');
         Route::resource('locations', LocationController::class)

@@ -10,6 +10,7 @@ class HtmlSanitizer
 {
     private const ALLOWED_TAGS = [
         'a', 'b', 'blockquote', 'br', 'em', 'h2', 'h3', 'h4', 'img', 'li', 'ol', 'p', 'strong', 'ul',
+        'div', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'span', 'figure', 'figcaption',
     ];
 
     private const GLOBAL_ATTRIBUTES = ['class', 'title'];

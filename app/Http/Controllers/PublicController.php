@@ -73,6 +73,14 @@ class PublicController extends Controller
 
     public function post(Post $post)
     {
+        // 301 Permanent Redirect jika slug merupakan duplikat berakhiran -1, -2, dst
+        if (preg_match('/^(.+)-\d+$/', $post->slug, $matches)) {
+            $basePost = Post::where('slug', $matches[1])->where('is_published', true)->first();
+            if ($basePost && $basePost->id !== $post->id) {
+                return redirect()->route('posts.show', $basePost->slug, 301);
+            }
+        }
+
         abort_unless($post->is_published, 404);
         $related = Post::where('is_published', true)
             ->whereKeyNot($post->id)
@@ -110,7 +118,13 @@ class PublicController extends Controller
     {
         $services = Service::publiclyIndexable()->get();
         $pages = Page::where('is_published', true)->get();
-        $posts = Post::where('is_published', true)->get();
+        // Hanya masukkan artikel kanonikal unik (singkirkan slug kloningan berakhiran -1, -2 jika induknya ada)
+        $posts = Post::where('is_published', true)->get()->reject(function ($p) {
+            if (preg_match('/^(.+)-\d+$/', $p->slug, $m)) {
+                return Post::where('slug', $m[1])->where('is_published', true)->exists();
+            }
+            return false;
+        });
         $locations = ServiceArea::publiclyIndexable()->get();
 
         return response()->view('public.sitemap', compact('services', 'pages', 'posts', 'locations'))->header('Content-Type', 'application/xml');

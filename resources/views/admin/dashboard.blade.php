@@ -29,7 +29,7 @@
 <div class="quick-actions">
     <a class="btn" href="{{ route('admin.services.create') }}">Add New Service</a>
     <a class="btn" href="{{ route('admin.posts.create') }}">Add New Blog Post</a>
-    <a class="btn-secondary" href="{{ route('admin.settings.edit') }}#homepage-content">Edit Homepage Content</a>
+    <a class="btn-secondary" href="{{ route('admin.homepage.index') }}">Edit Homepage (Per-Layer)</a>
     <a class="btn-secondary" href="{{ route('admin.media.index') }}">Upload Media</a>
     <a class="btn-secondary" href="{{ route('admin.settings.edit') }}#contact-information">Edit Contact Info</a>
     <a class="btn-secondary" href="{{ route('home') }}" target="_blank" rel="noreferrer">View Website</a>

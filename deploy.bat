@@ -20,7 +20,7 @@ echo.
 echo ===================================================
 echo [3/3] Melakukan deploy otomatis ke Hostinger via SSH...
 echo ===================================================
-ssh -i "%~dp0hostinger_deploy_key" -p 65002 -o StrictHostKeyChecking=no u774609161@153.92.15.53 "cd /home/u774609161/laravel && git pull origin main && php artisan optimize:clear && php artisan optimize && echo. && echo [OK] DEPLOY HOSTINGER SUKSES! Web telah diperbarui."
+ssh -i "%~dp0hostinger_deploy_key" -p 65002 -o StrictHostKeyChecking=no u774609161@153.92.15.53 "cd /home/u774609161/laravel && git pull origin main && cp -ru /home/u774609161/laravel/public/assets/* /home/u774609161/domains/baliphonerepair.com/public_html/assets/ && php artisan optimize:clear && php artisan optimize && echo. && echo [OK] DEPLOY HOSTINGER SUKSES! Web telah diperbarui."
 
 echo.
 echo ===================================================

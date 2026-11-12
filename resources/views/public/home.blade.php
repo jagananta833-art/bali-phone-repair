@@ -1761,62 +1761,86 @@
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; padding: 0 16px;">
         <!-- Partner 1: Puco Rooftop -->
-        <article style="background: #0f172a; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); color: #ffffff; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+        <article style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between;">
           <div>
-            <div style="background: #000000; border-radius: 14px; height: 160px; display: flex; align-items: center; justify-content: center; padding: 12px; margin-bottom: 18px; border: 1px solid #1e293b;">
+            <div style="background: #0f172a; border-radius: 12px; height: 160px; display: flex; align-items: center; justify-content: center; padding: 14px; margin-bottom: 16px; position: relative;">
               <img src="{{ asset('assets/images/partners/puco-rooftop.webp') }}" alt="Puco Rooftop logo" style="max-height: 100%; max-width: 100%; object-fit: contain;" loading="lazy" decoding="async">
+              <span style="position: absolute; top: 10px; right: 10px; background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px;">
+                Chill &amp; Wait Spot
+              </span>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <span style="font-size: 0.75rem; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.5px;">Cafe &amp; Rooftop</span>
-              <span style="font-size: 0.75rem; background: #1e293b; color: #cbd5e1; padding: 2px 8px; border-radius: 999px;">📍 Bali</span>
+              <span style="font-size: 0.75rem; font-weight: 700; color: #2563eb; background: #eff6ff; padding: 4px 10px; border-radius: 999px;">Cafe &amp; Rooftop</span>
+              <span style="font-size: 0.8rem; color: var(--color-gray-600); font-weight: 600;">📍 Bali</span>
             </div>
-            <h3 style="font-size: 1.25rem; font-weight: 700; color: #f8fafc; margin: 0 0 8px;">Puco Rooftop</h3>
-            <p style="font-size: 0.875rem; color: #94a3b8; line-height: 1.5; margin-bottom: 14px;">
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-gray-900); margin: 6px 0 8px;">Puco Rooftop</h3>
+            <p style="font-size: 0.875rem; color: var(--color-gray-600); line-height: 1.5; margin-bottom: 14px;">
               Tempat santai dan co-working estetik untuk menunggu servis HP Anda selesai sambil menikmati kopi &amp; pemandangan Bali.
             </p>
           </div>
-          <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 10px; padding: 10px 12px; font-size: 0.8rem; color: #38bdf8; font-weight: 600;">
-            🎁 Diskon F&amp;B Khusus Customer BPR
+          <div>
+            <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 10px 12px; font-size: 0.85rem; color: #15803d; font-weight: 600; margin-bottom: 14px;">
+              🎁 <strong>Perk:</strong> Diskon F&amp;B Khusus Customer BPR
+            </div>
+            <a href="{{ route('partners.index') }}" style="display: block; text-align: center; background: var(--color-gray-100); color: var(--color-gray-900); padding: 10px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none; border: 1px solid var(--color-gray-200);">
+              Info Benefit &rarr;
+            </a>
           </div>
         </article>
 
         <!-- Partner 2: Puri Canggu Rooms -->
-        <article style="background: #0f172a; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); color: #ffffff; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+        <article style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between;">
           <div>
-            <div style="background: #000000; border-radius: 14px; height: 160px; display: flex; align-items: center; justify-content: center; padding: 12px; margin-bottom: 18px; border: 1px solid #1e293b;">
+            <div style="background: #f1f5f9; border-radius: 12px; height: 160px; display: flex; align-items: center; justify-content: center; padding: 14px; margin-bottom: 16px; position: relative; border: 1px solid #e2e8f0;">
               <img src="{{ asset('assets/images/partners/puri-canggu-rooms.webp') }}" alt="Puri Canggu Rooms logo" style="max-height: 100%; max-width: 100%; object-fit: contain;" loading="lazy" decoding="async">
+              <span style="position: absolute; top: 10px; right: 10px; background: rgba(37, 99, 235, 0.15); color: #2563eb; border: 1px solid rgba(37, 99, 235, 0.3); font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px;">
+                Stay &amp; Repair
+              </span>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <span style="font-size: 0.75rem; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.5px;">Boutique Stay</span>
-              <span style="font-size: 0.75rem; background: #1e293b; color: #cbd5e1; padding: 2px 8px; border-radius: 999px;">📍 Canggu</span>
+              <span style="font-size: 0.75rem; font-weight: 700; color: #16a34a; background: #f0fdf4; padding: 4px 10px; border-radius: 999px;">Boutique Stay</span>
+              <span style="font-size: 0.8rem; color: var(--color-gray-600); font-weight: 600;">📍 Canggu</span>
             </div>
-            <h3 style="font-size: 1.25rem; font-weight: 700; color: #f8fafc; margin: 0 0 8px;">Puri Canggu Rooms</h3>
-            <p style="font-size: 0.875rem; color: #94a3b8; line-height: 1.5; margin-bottom: 14px;">
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-gray-900); margin: 6px 0 8px;">Puri Canggu Rooms</h3>
+            <p style="font-size: 0.875rem; color: var(--color-gray-600); line-height: 1.5; margin-bottom: 14px;">
               Penginapan nyaman &amp; strategis di Canggu. Tamu yang menginap mendapatkan akses prioritas teknisi datang ke villa/kamar.
             </p>
           </div>
-          <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 10px; padding: 10px 12px; font-size: 0.8rem; color: #38bdf8; font-weight: 600;">
-            🎁 Prioritas On-Site Service &amp; Promo Stay
+          <div>
+            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 10px 12px; font-size: 0.85rem; color: #1d4ed8; font-weight: 600; margin-bottom: 14px;">
+              🎁 <strong>Perk:</strong> Prioritas On-Site Service &amp; Promo Stay
+            </div>
+            <a href="{{ route('partners.index') }}" style="display: block; text-align: center; background: var(--color-gray-100); color: var(--color-gray-900); padding: 10px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none; border: 1px solid var(--color-gray-200);">
+              Info Benefit &rarr;
+            </a>
           </div>
         </article>
 
         <!-- Partner 3: Warung Dangin -->
-        <article style="background: #0f172a; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); color: #ffffff; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+        <article style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between;">
           <div>
-            <div style="background: #000000; border-radius: 14px; height: 160px; display: flex; align-items: center; justify-content: center; padding: 12px; margin-bottom: 18px; border: 1px solid #1e293b;">
+            <div style="background: #0f172a; border-radius: 12px; height: 160px; display: flex; align-items: center; justify-content: center; padding: 14px; margin-bottom: 16px; position: relative;">
               <img src="{{ asset('assets/images/partners/warung-dangin.webp') }}" alt="Warung Dangin logo" style="max-height: 100%; max-width: 100%; object-fit: contain;" loading="lazy" decoding="async">
+              <span style="position: absolute; top: 10px; right: 10px; background: rgba(234, 88, 12, 0.2); color: #f97316; border: 1px solid rgba(234, 88, 12, 0.35); font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px;">
+                Dining Benefit
+              </span>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <span style="font-size: 0.75rem; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.5px;">Kuliner Bali</span>
-              <span style="font-size: 0.75rem; background: #1e293b; color: #cbd5e1; padding: 2px 8px; border-radius: 999px;">📍 Bali</span>
+              <span style="font-size: 0.75rem; font-weight: 700; color: #ea580c; background: #fff7ed; padding: 4px 10px; border-radius: 999px;">Kuliner Bali</span>
+              <span style="font-size: 0.8rem; color: var(--color-gray-600); font-weight: 600;">📍 Bali</span>
             </div>
-            <h3 style="font-size: 1.25rem; font-weight: 700; color: #f8fafc; margin: 0 0 8px;">Warung Dangin</h3>
-            <p style="font-size: 0.875rem; color: #94a3b8; line-height: 1.5; margin-bottom: 14px;">
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-gray-900); margin: 6px 0 8px;">Warung Dangin</h3>
+            <p style="font-size: 0.875rem; color: var(--color-gray-600); line-height: 1.5; margin-bottom: 14px;">
               Kuliner otentik khas Bali dengan cita rasa rempah asli. Tunjukkan nota servis BPR Anda untuk klaim promo santap hemat.
             </p>
           </div>
-          <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 10px; padding: 10px 12px; font-size: 0.8rem; color: #38bdf8; font-weight: 600;">
-            🎁 Voucher Santap Kuliner Spesial
+          <div>
+            <div style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: 10px; padding: 10px 12px; font-size: 0.85rem; color: #c2410c; font-weight: 600; margin-bottom: 14px;">
+              🎁 <strong>Perk:</strong> Voucher Santap Kuliner Spesial
+            </div>
+            <a href="{{ route('partners.index') }}" style="display: block; text-align: center; background: var(--color-gray-100); color: var(--color-gray-900); padding: 10px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none; border: 1px solid var(--color-gray-200);">
+              Info Benefit &rarr;
+            </a>
           </div>
         </article>
       </div>

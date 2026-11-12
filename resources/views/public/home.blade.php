@@ -790,47 +790,6 @@
       font-weight: 700;
     }
 
-    /* Pricing Quick Overview */
-    .pricing-table-container {
-      max-width: 820px;
-      margin: 0 auto;
-      background: #ffffff;
-      border: 1px solid var(--color-gray-200);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-    }
-    .pricing-table-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 24px;
-      border-bottom: 1px solid var(--color-gray-100);
-      transition: background .2s ease;
-    }
-    .pricing-table-row:last-child {
-      border-bottom: none;
-    }
-    .pricing-table-row:hover {
-      background: var(--color-gray-50);
-    }
-    .pricing-service-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--color-gray-900);
-      margin: 0;
-    }
-    .pricing-service-duration {
-      font-size: 12.5px;
-      color: var(--color-gray-500);
-      margin: 2px 0 0;
-    }
-    .pricing-price-tag {
-      font-size: 16px;
-      font-weight: 800;
-      color: var(--color-gray-900);
-      text-align: right;
-    }
 
     /* Device Buy/Sell & Rental Sections */
     .extra-services-grid {
@@ -1549,58 +1508,7 @@
       </div>
     </section>
 
-    <!-- Transparent Pricing Overview (Reference: iphonerepairbali.com) -->
-    <section class="section-standard" id="pricing">
-      <div class="section-head-center">
-        <h2 class="section-main-title">{{ $siteSettings['pricing_title'] ?? 'Transparent Pricing' }}</h2>
-        <p class="section-main-subtitle">{{ $siteSettings['pricing_subtitle'] ?? 'All prices include parts, labor, and travel to your location. No hidden fees.' }}</p>
-      </div>
 
-      <div class="pricing-table-container">
-        <div class="pricing-table-row">
-          <div>
-            <h3 class="pricing-service-title">{{ $siteSettings['pricing_row1_title'] ?? 'iPhone Screen Repair' }}</h3>
-            <p class="pricing-service-duration">{{ $siteSettings['pricing_row1_duration'] ?? '30-60 min turnaround' }}</p>
-          </div>
-          <div class="pricing-price-tag">{{ $siteSettings['pricing_row1_price'] ?? 'Rp 500.000 - 1.500.000' }}</div>
-        </div>
-        <div class="pricing-table-row">
-          <div>
-            <h3 class="pricing-service-title">{{ $siteSettings['pricing_row2_title'] ?? 'iPhone Battery Replacement' }}</h3>
-            <p class="pricing-service-duration">{{ $siteSettings['pricing_row2_duration'] ?? '20-40 min turnaround' }}</p>
-          </div>
-          <div class="pricing-price-tag">{{ $siteSettings['pricing_row2_price'] ?? 'Rp 400.000 - 800.000' }}</div>
-        </div>
-        <div class="pricing-table-row">
-          <div>
-            <h3 class="pricing-service-title">{{ $siteSettings['pricing_row3_title'] ?? 'Charging Port Repair' }}</h3>
-            <p class="pricing-service-duration">{{ $siteSettings['pricing_row3_duration'] ?? '20-30 min turnaround' }}</p>
-          </div>
-          <div class="pricing-price-tag">{{ $siteSettings['pricing_row3_price'] ?? 'Rp 300.000' }}</div>
-        </div>
-        <div class="pricing-table-row">
-          <div>
-            <h3 class="pricing-service-title">{{ $siteSettings['pricing_row4_title'] ?? 'Water Damage Recovery' }}</h3>
-            <p class="pricing-service-duration">{{ $siteSettings['pricing_row4_duration'] ?? '60-120 min ultrasonic clean' }}</p>
-          </div>
-          <div class="pricing-price-tag">{{ $siteSettings['pricing_row4_price'] ?? 'Rp 500.000' }}</div>
-        </div>
-        <div class="pricing-table-row">
-          <div>
-            <h3 class="pricing-service-title">{{ $siteSettings['pricing_row5_title'] ?? 'Samsung Screen Repair' }}</h3>
-            <p class="pricing-service-duration">{{ $siteSettings['pricing_row5_duration'] ?? '30-60 min turnaround' }}</p>
-          </div>
-          <div class="pricing-price-tag">{{ $siteSettings['pricing_row5_price'] ?? 'Rp 400.000 - 1.200.000' }}</div>
-        </div>
-        <div class="pricing-table-row">
-          <div>
-            <h3 class="pricing-service-title">{{ $siteSettings['pricing_row6_title'] ?? 'MacBook Keyboard & Fan Repair' }}</h3>
-            <p class="pricing-service-duration">{{ $siteSettings['pricing_row6_duration'] ?? '45-90 min turnaround' }}</p>
-          </div>
-          <div class="pricing-price-tag">{{ $siteSettings['pricing_row6_price'] ?? 'Rp 600.000 - 1.400.000' }}</div>
-        </div>
-      </div>
-    </section>
 
     <!-- Additional Services: Device Trade-in / Buy & Sell + MacBook Rental -->
     <section class="section-standard" style="background: var(--color-gray-50); border-top: 1px solid var(--color-gray-200); border-bottom: 1px solid var(--color-gray-200);">

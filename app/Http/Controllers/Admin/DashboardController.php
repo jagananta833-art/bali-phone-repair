@@ -35,6 +35,7 @@ class DashboardController extends Controller
             'recentServices' => Service::orderByDesc('updated_at')->take(5)->get(),
             'lastUpdated' => $lastUpdated,
             'settings' => $settings,
+            'license' => \App\Services\LicenseService::verify(),
         ]);
     }
 }

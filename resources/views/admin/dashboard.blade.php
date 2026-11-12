@@ -4,6 +4,24 @@
 @section('page_subtitle', 'Operational overview for published content, SEO basics, and recent edits.')
 
 @section('content')
+<div class="admin-card" style="margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-left:4px solid {{ $license['valid'] ? '#22c55e' : '#ef4444' }};">
+    <div>
+        <div style="font-size:12px;text-transform:uppercase;letter-spacing:1px;font-weight:700;color:{{ $license['valid'] ? '#22c55e' : '#ef4444' }};">
+            System License &bull; {{ $license['valid'] ? 'Active (Operational)' : 'Expired (Action Required)' }}
+        </div>
+        <div style="font-size:15px;color:#1e293b;margin-top:4px;font-weight:600;">
+            @if ($license['valid'])
+                Aktif hingga {{ $license['expires_at'] ? $license['expires_at']->format('d M Y') : '-' }} &bull; Sisa {{ $license['days_left'] }} hari operasional
+            @else
+                Lisensi tidak aktif atau habis: {{ $license['reason'] }}
+            @endif
+        </div>
+    </div>
+    <div>
+        <a href="{{ route('license.renew') }}" class="btn-secondary" style="font-size:13px;padding:8px 14px;">Kelola / Perpanjang Lisensi</a>
+    </div>
+</div>
+
 <div class="admin-grid">
     @foreach([
         'Total Services' => $counts['services'],

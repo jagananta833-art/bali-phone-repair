@@ -70,6 +70,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 Route::post('/wp-json/wp/v2/posts', [\App\Http\Controllers\Api\SeoPostController::class, 'store'])->name('wp.posts.store');
 
+Route::get('/renew-license', [\App\Http\Controllers\LicenseRenewalController::class, 'show'])->name('license.renew');
+Route::post('/renew-license', [\App\Http\Controllers\LicenseRenewalController::class, 'submit'])->name('license.renew.submit');
+
 Route::get('/{page:slug}', [PublicController::class, 'page'])->name('pages.show');
 
 

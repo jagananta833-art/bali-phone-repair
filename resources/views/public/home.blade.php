@@ -1234,6 +1234,7 @@
         <a href="#how-it-works">How It Works</a>
         <a href="#faq">FAQ</a>
         <a href="{{ route('blog') }}">Blog</a>
+        <a href="{{ route('partners.index') }}">Partner</a>
       </nav>
 
       <div class="header-right-actions">

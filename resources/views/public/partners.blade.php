@@ -42,8 +42,8 @@
       --primary-gold: #D4A346;
       --gold-gradient: linear-gradient(135deg, #F5D061 0%, #D4A346 50%, #B8860B 100%);
       --gold-gradient-hover: linear-gradient(135deg, #FAE292 0%, #E5B24E 50%, #C69214 100%);
-      --primary-blue: #2563eb;
-      --primary-blue-hover: #1d4ed8;
+      --primary-accent: #b45309;
+      --primary-accent-hover: #92400e;
       --color-dark: #0f172a;
       --color-gray-900: #111827;
       --color-gray-800: #1f2937;
@@ -124,7 +124,7 @@
     }
     .nav-links-desktop a:hover,
     .nav-links-desktop a.active {
-      color: var(--primary-blue);
+      color: var(--primary-accent);
     }
     .header-right-actions {
       display: flex;
@@ -333,9 +333,9 @@
       color: #ffffff;
     }
     .tag-stay {
-      background: #eff6ff;
-      color: #1d4ed8;
-      border: 1px solid #bfdbfe;
+      background: #f1f5f9;
+      color: #1e293b;
+      border: 1px solid #cbd5e1;
     }
     .tag-dine {
       background: #fffbeb;
@@ -534,7 +534,7 @@
         <a href="{{ route('home') }}#how-it-works">How It Works</a>
         <a href="{{ route('home') }}#faq">FAQ</a>
         <a href="{{ route('blog') }}">Blog</a>
-        <a class="active" href="{{ route('partners.index') }}" style="color: var(--primary-blue);">Partner</a>
+        <a class="active" href="{{ route('partners.index') }}" style="color: var(--primary-accent);">Partner</a>
       </nav>
 
       <div class="header-right-actions">
@@ -564,7 +564,7 @@
         <div class="partner-left-content">
           <h1>
             Book your repair now <br>
-            <span style="color: var(--primary-blue);">Get more benefit at our Partners</span>
+            <span style="color: #b45309;">Get more benefit at our Partners</span>
           </h1>
 
           <p class="partner-lifestyle-lead">
@@ -589,7 +589,7 @@
               <span>Claim Partner Perks via WhatsApp</span>
             </a>
             <a href="{{ route('home') }}#locations" style="display: inline-flex; align-items: center; gap: 6px; background: var(--color-gray-100); color: var(--color-gray-900); padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 14px; border: 1px solid var(--color-gray-200);">
-              <i class="fa-solid fa-location-dot" style="color: var(--primary-blue);"></i> Find Workshops
+              <i class="fa-solid fa-location-dot" style="color: #b45309;"></i> Find Workshops
             </a>
           </div>
         </div>
@@ -770,7 +770,7 @@
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; text-align: left;">
           <div style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 26px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);">
-            <div style="font-size: 32px; font-weight: 900; color: var(--primary-blue); margin-bottom: 8px;">01</div>
+            <div style="font-size: 32px; font-weight: 900; color: #d4a346; margin-bottom: 8px;">01</div>
             <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-gray-900); margin: 0 0 8px;">Book Your Repair</h3>
             <p style="color: var(--color-gray-600); font-size: 0.9rem; line-height: 1.6; margin: 0;">
               Contact our technician team on WhatsApp or visit our walk-in workshops in Canggu or Denpasar for your device repair.
@@ -778,7 +778,7 @@
           </div>
 
           <div style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 26px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);">
-            <div style="font-size: 32px; font-weight: 900; color: var(--primary-blue); margin-bottom: 8px;">02</div>
+            <div style="font-size: 32px; font-weight: 900; color: #d4a346; margin-bottom: 8px;">02</div>
             <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-gray-900); margin: 0 0 8px;">Keep Your Repair Confirmation</h3>
             <p style="color: var(--color-gray-600); font-size: 0.9rem; line-height: 1.6; margin: 0;">
               Keep the official invoice or WhatsApp service confirmation message provided by our technician team.
@@ -786,7 +786,7 @@
           </div>
 
           <div style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 26px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);">
-            <div style="font-size: 32px; font-weight: 900; color: var(--primary-blue); margin-bottom: 8px;">03</div>
+            <div style="font-size: 32px; font-weight: 900; color: #d4a346; margin-bottom: 8px;">03</div>
             <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-gray-900); margin: 0 0 8px;">Present at Our Partner Locations</h3>
             <p style="color: var(--color-gray-600); font-size: 0.9rem; line-height: 1.6; margin: 0;">
               Visit Puco Rooftop, Puri Canggu Rooms, or Warung Dangin and present your repair confirmation to unlock immediate discounts and privileges.

@@ -1667,7 +1667,7 @@
         <article style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
             <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-gray-900); margin: 0;">📍 iSmart Canggu</h3>
-            <span style="font-size: 0.75rem; font-weight: 700; color: #2563eb; background: #eff6ff; padding: 4px 10px; border-radius: 999px;">Canggu Hub</span>
+            <span style="font-size: 0.75rem; font-weight: 700; color: #b45309; background: #fffbeb; border: 1px solid rgba(217,119,6,0.25); padding: 4px 10px; border-radius: 999px;">Canggu Hub</span>
           </div>
           <p style="color: var(--color-gray-700); font-size: 0.9rem; font-weight: 600; margin-bottom: 8px;">
             Jl. Raya Canggu, Kerobokan, Badung, Bali
@@ -1682,7 +1682,7 @@
             🛵 <strong>Service:</strong> Walk-in Workshop • In-Villa Service • Courier Pickup
           </div>
           <div style="display: flex; gap: 8px;">
-            <a href="https://wa.me/{{ $whatsapp }}?text=Hi%20iSmart%20Canggu%2C%20I%20need%20repair%20assistance" target="_blank" rel="noreferrer" style="flex: 1; text-align: center; background: #2563eb; color: #ffffff; padding: 10px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none;">
+            <a href="https://wa.me/{{ $whatsapp }}?text=Hi%20iSmart%20Canggu%2C%20I%20need%20repair%20assistance" target="_blank" rel="noreferrer" style="flex: 1; text-align: center; background: #0f172a; color: #ffffff; padding: 10px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none;">
               <i class="fa-brands fa-whatsapp"></i> Chat Canggu
             </a>
             <a href="{{ url('/service-areas/canggu') }}" style="text-align: center; background: var(--color-gray-100); color: var(--color-gray-900); padding: 10px 14px; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none; border: 1px solid var(--color-gray-200);">
@@ -1763,7 +1763,7 @@
           <div>
             <h2 style="font-size: clamp(26px, 3.5vw, 38px); font-weight: 900; color: var(--color-gray-900); line-height: 1.25; margin: 0 0 16px; letter-spacing: -0.03em;">
               Book your repair now <br>
-              <span style="color: #2563eb;">Get more benefit at our Partners</span>
+              <span style="color: #b45309;">Get more benefit at our Partners</span>
             </h2>
 
             <p style="font-size: 17px; font-weight: 800; color: var(--color-gray-900); line-height: 1.45; margin: 0 0 14px;">
@@ -1779,7 +1779,7 @@
             </p>
 
             <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-              <a href="{{ route('partners.index') }}" style="display: inline-flex; align-items: center; gap: 8px; background: #2563eb; color: #ffffff; padding: 12px 26px; border-radius: 999px; font-weight: 700; font-size: 14px; text-decoration: none; box-shadow: 0 4px 12px rgba(37,99,235,0.25);">
+              <a href="{{ route('partners.index') }}" class="btn-quote-pill" style="font-size: 14px; padding: 12px 24px;">
                 <span>Explore Full Partner Directory</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
@@ -1828,7 +1828,7 @@
                   <div style="flex: 1; min-width: 0;">
                     <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px; flex-wrap: wrap; margin-bottom: 2px;">
                       <strong style="font-size: 15px; font-weight: 800; color: var(--color-gray-900);">Puri Canggu Rooms</strong>
-                      <span style="font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; text-transform: uppercase;">Stay</span>
+                      <span style="font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #f1f5f9; color: #1e293b; border: 1px solid #cbd5e1; text-transform: uppercase;">Stay</span>
                     </div>
                     <p style="font-size: 12px; color: var(--color-gray-600); margin: 0 0 5px;">Boutique Stay &amp; Villa Rooms &bull; Canggu</p>
                     <div style="display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; color: #047857; background: #ecfdf5; border: 1px solid #a7f3d0; padding: 2px 8px; border-radius: 6px;">

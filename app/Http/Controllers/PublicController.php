@@ -125,7 +125,7 @@ class PublicController extends Controller
                 'benefit' => 'Spacious Coworking space while you work remotely from Bali.',
                 'description' => 'Spacious Coworking space while you work remotely from Bali. Nikmati suasana rooftop estetik dan koneksi cepat sambil menunggu perbaikan perangkat Anda.',
                 'badge' => 'Verified Partner',
-                'highlight' => 'Chill & Wait Spot',
+                'highlight' => 'Co-Working Space',
             ],
             [
                 'name' => 'Puri Canggu Rooms',

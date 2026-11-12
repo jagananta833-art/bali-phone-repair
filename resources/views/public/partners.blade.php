@@ -611,7 +611,7 @@
                 <div class="partner-trio-detail">
                   <div class="partner-trio-meta">
                     <strong>Puco Rooftop</strong>
-                    <span class="partner-tag-pill tag-chill">Chill &amp; Wait Spot</span>
+                    <span class="partner-tag-pill tag-chill">Co-Working Space</span>
                   </div>
                   <p class="partner-trio-sub">Cafe, Rooftop Lounge &amp; Coworking &bull; Bali</p>
                   <div class="partner-trio-perk">

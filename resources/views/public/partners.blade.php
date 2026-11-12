@@ -629,7 +629,7 @@
                 <div class="partner-trio-detail">
                   <div class="partner-trio-meta">
                     <strong>Puri Canggu Rooms</strong>
-                    <span class="partner-tag-pill tag-stay">Stay &amp; Repair</span>
+                    <span class="partner-tag-pill tag-stay">Stay</span>
                   </div>
                   <p class="partner-trio-sub">Boutique Stay &amp; Villa Rooms &bull; Canggu</p>
                   <div class="partner-trio-perk">
@@ -718,7 +718,7 @@
               </div>
             </div>
             <div class="pcard-perk-box">
-              <strong><i class="fa-solid fa-bed"></i> Stay &amp; Repair Benefit</strong>
+              <strong><i class="fa-solid fa-bed"></i> Stay Benefit</strong>
               <p>Affordable stay in Canggu. Cashback Voucher</p>
             </div>
             <p class="pcard-desc">

@@ -1828,7 +1828,7 @@
                   <div style="flex: 1; min-width: 0;">
                     <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px; flex-wrap: wrap; margin-bottom: 2px;">
                       <strong style="font-size: 15px; font-weight: 800; color: var(--color-gray-900);">Puri Canggu Rooms</strong>
-                      <span style="font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; text-transform: uppercase;">Stay &amp; Repair</span>
+                      <span style="font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; text-transform: uppercase;">Stay</span>
                     </div>
                     <p style="font-size: 12px; color: var(--color-gray-600); margin: 0 0 5px;">Boutique Stay &amp; Villa Rooms &bull; Canggu</p>
                     <div style="display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; color: #047857; background: #ecfdf5; border: 1px solid #a7f3d0; padding: 2px 8px; border-radius: 6px;">

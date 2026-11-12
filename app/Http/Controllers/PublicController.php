@@ -135,7 +135,7 @@ class PublicController extends Controller
                 'benefit' => 'Affordable stay in Canggu. Cashback Voucher',
                 'description' => 'Akomodasi tenang dan nyaman di pusat Canggu. Affordable stay in Canggu with Cashback Voucher & akses teknisi BPR.',
                 'badge' => 'Verified Partner',
-                'highlight' => 'Stay & Repair',
+                'highlight' => 'Stay',
             ],
             [
                 'name' => 'Warung Dangin',

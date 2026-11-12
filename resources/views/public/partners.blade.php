@@ -8,7 +8,7 @@
         : null;
     $email = $siteSettings['email'] ?? 'hello@baliphonerepair.com';
     $title = 'Our Verified Partners - Book Your Repair Now, Get More Benefit at Our Partners | Bali Phone Repair';
-    $description = 'Jaringan 3 mitra resmi UMKM Bali Phone Repair: Puco Rooftop, Puri Canggu Rooms, dan Warung Dangin. Dapatkan diskon F&B, promo stay villa, dan voucher makan khusus customer BPR.';
+    $description = 'Verified Bali Phone Repair partners: Puco Rooftop, Puri Canggu Rooms, and Warung Dangin. Enjoy exclusive coworking perks, stay cashback vouchers, and dining discounts.';
     $canonical = route('partners.index');
 @endphp
 <!doctype html>
@@ -649,18 +649,18 @@
                     <strong>Warung Dangin</strong>
                     <span class="partner-tag-pill tag-dine">Dining Benefit</span>
                   </div>
-                  <p class="partner-trio-sub">Kuliner Otentik Bali &amp; Resto</p>
+                  <p class="partner-trio-sub">Authentic Balinese Culinary &amp; Restaurant</p>
                   <div class="partner-trio-perk">
                     <i class="fa-solid fa-gift"></i>
-                    <span>Voucher Diskon Menu Otentik khusus customer BPR</span>
+                    <span>Authentic dining discount voucher for BPR clients</span>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="partner-trio-canvas-footer">
-              <span>✨ Eksklusif untuk pelanggan Bali Phone Repair</span>
-              <span class="trio-claim-hint">Tunjukkan nota/chat servis untuk klaim</span>
+              <span>✨ Exclusive for Bali Phone Repair clients</span>
+              <span class="trio-claim-hint">Show repair invoice / chat to claim</span>
             </div>
           </div>
         </div>
@@ -672,13 +672,13 @@
       <div style="max-width: 1240px; margin: 0 auto;">
         <div style="text-align: center; max-width: 720px; margin: 0 auto 36px;">
           <span class="section-eyebrow-pill" style="display: inline-flex; align-items: center; gap: 6px; background: #fffbeb; color: #b45309; border: 1px solid rgba(217, 119, 6, 0.25); font-size: 13px; font-weight: 800; padding: 5px 14px; border-radius: 999px;">
-            <i class="fa-solid fa-star"></i> Mitra Terverifikasi
+            <i class="fa-solid fa-star"></i> Verified Partners
           </span>
           <h2 style="font-size: clamp(26px, 3.5vw, 36px); font-weight: 800; color: var(--color-gray-900); margin: 12px 0 8px;">
-            Daftar Mitra Resmi &amp; Keuntungan Eksklusif
+            Official Partners &amp; Exclusive Perks
           </h2>
           <p style="color: var(--color-gray-600); font-size: 15.5px; margin: 0;">
-            Kunjungi mitra resmi kami di Bali untuk menikmati promo khusus setiap kali Anda melakukan perbaikan gadget di BPR.
+            Visit our official partners in Bali to enjoy exclusive perks and privileges whenever you repair your device with BPR.
           </p>
         </div>
 
@@ -699,10 +699,10 @@
               <p>Spacious Coworking space while you work remotely from Bali.</p>
             </div>
             <p class="pcard-desc">
-              Nikmati suasana rooftop estetik dengan aneka hidangan kopi dan makanan lezat sambil menunggu pengerjaan servis perangkat Anda selesai dengan aman.
+              Enjoy an aesthetic rooftop atmosphere with specialty coffee, high-speed Wi-Fi, and delicious dining while your device is being serviced.
             </p>
-            <a class="pcard-action" href="https://wa.me/{{ $whatsapp }}?text=Halo%20BPR%2C%20saya%20ingin%20tahu%20promo%20di%20Puco%20Rooftop" target="_blank" rel="noreferrer">
-              <i class="fa-brands fa-whatsapp" style="color: #059669;"></i> Tanya Promo Puco
+            <a class="pcard-action" href="https://wa.me/{{ $whatsapp }}?text=Hi%20BPR%2C%20I%20would%20like%20to%20know%20more%20about%20Puco%20Rooftop%20perks" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-whatsapp" style="color: #059669;"></i> Ask Puco Perks
             </a>
           </article>
 
@@ -722,10 +722,10 @@
               <p>Affordable stay in Canggu. Cashback Voucher</p>
             </div>
             <p class="pcard-desc">
-              Akomodasi tenang dan nyaman di pusat Canggu. Tamu yang menginap mendapatkan akses panggilan teknisi Bali Phone Repair langsung ke kamar dalam 30–60 menit.
+              Peaceful and comfortable boutique accommodation in central Canggu. Guests enjoy priority on-site mobile technician dispatch straight to their room within 30–60 minutes.
             </p>
-            <a class="pcard-action" href="https://wa.me/{{ $whatsapp }}?text=Halo%20BPR%2C%20saya%20ingin%20servis%20di%20Puri%20Canggu%20Rooms" target="_blank" rel="noreferrer">
-              <i class="fa-brands fa-whatsapp" style="color: #059669;"></i> Servis ke Puri Canggu
+            <a class="pcard-action" href="https://wa.me/{{ $whatsapp }}?text=Hi%20BPR%2C%20I%20need%20a%20repair%20service%20at%20Puri%20Canggu%20Rooms" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-whatsapp" style="color: #059669;"></i> Book Service to Puri Canggu
             </a>
           </article>
 
@@ -737,18 +737,18 @@
               </div>
               <div class="pcard-title">
                 <h3>Warung Dangin</h3>
-                <span>Kuliner Otentik Bali &amp; Resto</span>
+                <span>Authentic Balinese Culinary &amp; Restaurant</span>
               </div>
             </div>
             <div class="pcard-perk-box">
               <strong><i class="fa-solid fa-utensils"></i> Dining Privilege</strong>
-              <p>Voucher diskon santap menu otentik Bali khusus customer BPR.</p>
+              <p>Authentic Balinese dining discount voucher exclusively for BPR clients.</p>
             </div>
             <p class="pcard-desc">
-              Sajian kuliner khas Bali dengan cita rasa otentik bumbu warisan. Cukup tunjukkan nota atau bukti chat servis BPR untuk klaim potongan harga spesial.
+              Traditional Balinese culinary dishes crafted with rich heritage recipes. Simply show your BPR repair invoice or WhatsApp chat confirmation to claim your dining discount.
             </p>
-            <a class="pcard-action" href="https://wa.me/{{ $whatsapp }}?text=Halo%20BPR%2C%20saya%20ingin%20klaim%20voucher%20Warung%20Dangin" target="_blank" rel="noreferrer">
-              <i class="fa-brands fa-whatsapp" style="color: #059669;"></i> Klaim Voucher Kuliner
+            <a class="pcard-action" href="https://wa.me/{{ $whatsapp }}?text=Hi%20BPR%2C%20I%20would%20like%20to%20claim%20Warung%20Dangin%20dining%20voucher" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-whatsapp" style="color: #059669;"></i> Claim Dining Voucher
             </a>
           </article>
         </div>
@@ -762,10 +762,10 @@
           <i class="fa-solid fa-circle-check"></i> Simple &amp; Rewarding
         </span>
         <h2 style="font-size: clamp(24px, 3.5vw, 34px); font-weight: 800; color: var(--color-gray-900); margin: 12px 0 10px;">
-          Cara Mudah Klaim Keuntungan di Mitra Kami
+          How to Claim Your Partner Perks
         </h2>
         <p style="color: var(--color-gray-600); font-size: 16px; margin: 0 0 36px;">
-          Cukup 3 langkah praktis untuk menikmati fasilitas spesial di seluruh jaringan mitra BPR.
+          Just 3 simple steps to enjoy exclusive perks across our Bali partner network.
         </p>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; text-align: left;">
@@ -773,23 +773,23 @@
             <div style="font-size: 32px; font-weight: 900; color: var(--primary-blue); margin-bottom: 8px;">01</div>
             <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-gray-900); margin: 0 0 8px;">Book Your Repair</h3>
             <p style="color: var(--color-gray-600); font-size: 0.9rem; line-height: 1.6; margin: 0;">
-              Hubungi tim teknisi kami lewat WhatsApp atau kunjungi workshop fisik BPR di Canggu atau Denpasar untuk servis perangkat Anda.
+              Contact our technician team on WhatsApp or visit our walk-in workshops in Canggu or Denpasar for your device repair.
             </p>
           </div>
 
           <div style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 26px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);">
             <div style="font-size: 32px; font-weight: 900; color: var(--primary-blue); margin-bottom: 8px;">02</div>
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-gray-900); margin: 0 0 8px;">Simpan Bukti Servis</h3>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-gray-900); margin: 0 0 8px;">Keep Your Repair Confirmation</h3>
             <p style="color: var(--color-gray-600); font-size: 0.9rem; line-height: 1.6; margin: 0;">
-              Simpan bukti invoice resmi atau chat konfirmasi pengerjaan yang diberikan oleh tim teknisi Bali Phone Repair.
+              Keep the official invoice or WhatsApp service confirmation message provided by our technician team.
             </p>
           </div>
 
           <div style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 26px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);">
             <div style="font-size: 32px; font-weight: 900; color: var(--primary-blue); margin-bottom: 8px;">03</div>
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-gray-900); margin: 0 0 8px;">Tunjukkan di Mitra Kami</h3>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-gray-900); margin: 0 0 8px;">Present at Our Partner Locations</h3>
             <p style="color: var(--color-gray-600); font-size: 0.9rem; line-height: 1.6; margin: 0;">
-              Datang ke lokasi Puco Rooftop, Puri Canggu Rooms, atau Warung Dangin dan tunjukkan bukti servis untuk menikmati diskon, promo santap, atau privilege langsung.
+              Visit Puco Rooftop, Puri Canggu Rooms, or Warung Dangin and present your repair confirmation to unlock immediate discounts and privileges.
             </p>
           </div>
         </div>
@@ -800,14 +800,14 @@
     <section style="background: #0f172a; color: #ffffff; padding: 60px 20px; text-align: center;">
       <div style="max-width: 800px; margin: 0 auto;">
         <h2 style="font-size: clamp(26px, 3.5vw, 36px); font-weight: 800; color: #ffffff; margin: 0 0 12px; letter-spacing: -0.02em;">
-          Punya Bisnis atau UMKM di Bali?
+          Own a Local Business or Brand in Bali?
         </h2>
         <p style="color: #94a3b8; font-size: 16px; line-height: 1.6; margin: 0 0 24px;">
-          Mari berkolaborasi bersama jaringan pelanggan setia Bali Phone Repair. Dapatkan eksposur komunitas dan cross-benefit saling menguntungkan.
+          Partner with Bali Phone Repair's active client community. Gain verified customer exposure and mutually rewarding cross-promotional benefits.
         </p>
-        <a href="https://wa.me/{{ $whatsapp }}?text=Halo%20Admin%20BPR%2C%20saya%20tertarik%20mengajukan%20kemitraan%20UMKM" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center; gap: 8px; background: var(--gold-gradient); color: #0f172a; padding: 13px 28px; border-radius: 999px; font-weight: 700; font-size: 15px; box-shadow: 0 6px 16px rgba(212, 163, 70, 0.35);">
+        <a href="https://wa.me/{{ $whatsapp }}?text=Hi%20Bali%20Phone%20Repair%2C%20I%20am%20interested%20in%20becoming%20a%20partner" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center; gap: 8px; background: var(--gold-gradient); color: #0f172a; padding: 13px 28px; border-radius: 999px; font-weight: 700; font-size: 15px; box-shadow: 0 6px 16px rgba(212, 163, 70, 0.35);">
           <i class="fa-brands fa-whatsapp" style="font-size: 1.2em;"></i>
-          <span>Hubungi Kami untuk Kemitraan</span>
+          <span>Contact Us for Partnership</span>
         </a>
       </div>
     </section>

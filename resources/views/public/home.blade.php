@@ -1771,19 +1771,19 @@
             </p>
 
             <p style="font-size: 15px; color: var(--color-gray-600); line-height: 1.7; margin: 0 0 14px;">
-              Di Bali Phone Repair, kami percaya bahwa komunitas melampaui sekadar meja servis kami. Kami berkolaborasi dengan brand lokal terbaik di Bali — mulai dari kafe rooftop, studio yoga, boutique stay, hingga tempat kuliner otentik untuk memberikan keuntungan ekstra bagi setiap pelanggan kami.
+              At Bali Phone Repair, we believe community extends beyond our repair benches. We partner with top-rated local spots across Bali — from rooftop cafes and coworking spaces to boutique stays and authentic restaurants — providing exclusive perks for all our clients.
             </p>
 
             <p style="font-size: 15px; color: var(--color-gray-600); line-height: 1.7; margin: 0 0 24px;">
-              Nikmati diskon eksklusif, minuman selamat datang gratis, hingga penawaran menginap spesial sambil perangkat Anda ditangani dengan aman oleh teknisi profesional.
+              Enjoy special discounts, complimentary treats, and villa stay privileges while your device is expertly serviced by our certified technicians.
             </p>
 
             <div style="display: flex; gap: 12px; flex-wrap: wrap;">
               <a href="{{ route('partners.index') }}" style="display: inline-flex; align-items: center; gap: 8px; background: #2563eb; color: #ffffff; padding: 12px 26px; border-radius: 999px; font-weight: 700; font-size: 14px; text-decoration: none; box-shadow: 0 4px 12px rgba(37,99,235,0.25);">
-                <span>Buka Direktori Partner Lengkap</span>
+                <span>Explore Full Partner Directory</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
-              <a href="https://wa.me/{{ $whatsapp }}?text=Halo%20Bali%20Phone%20Repair%2C%20saya%20ingin%20tanya%20benefit%20partner" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: var(--color-gray-100); color: var(--color-gray-900); padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 14px; border: 1px solid var(--color-gray-200);">
+              <a href="https://wa.me/{{ $whatsapp }}?text=Hi%20Bali%20Phone%20Repair%2C%20I%20would%20like%20to%20know%20more%20about%20partner%20perks" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: var(--color-gray-100); color: var(--color-gray-900); padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 14px; border: 1px solid var(--color-gray-200);">
                 <i class="fa-brands fa-whatsapp" style="color: #059669;"></i> Chat WhatsApp
               </a>
             </div>
@@ -1848,18 +1848,18 @@
                       <strong style="font-size: 15px; font-weight: 800; color: var(--color-gray-900);">Warung Dangin</strong>
                       <span style="font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #fffbeb; color: #b45309; border: 1px solid #fde68a; text-transform: uppercase;">Dining Benefit</span>
                     </div>
-                    <p style="font-size: 12px; color: var(--color-gray-600); margin: 0 0 5px;">Kuliner Otentik Bali &amp; Resto</p>
+                    <p style="font-size: 12px; color: var(--color-gray-600); margin: 0 0 5px;">Authentic Balinese Cuisine &amp; Restaurant</p>
                     <div style="display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; color: #047857; background: #ecfdf5; border: 1px solid #a7f3d0; padding: 2px 8px; border-radius: 6px;">
                       <i class="fa-solid fa-gift"></i>
-                      <span>Voucher diskon menu kuliner otentik</span>
+                      <span>Dining discount voucher for BPR clients</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div style="margin-top: 16px; padding-top: 12px; border-top: 1px dashed var(--color-gray-200); display: flex; align-items: center; justify-content: space-between; font-size: 11.5px; color: var(--color-gray-600); flex-wrap: wrap; gap: 6px;">
-                <span>✨ Eksklusif pelanggan Bali Phone Repair</span>
-                <span style="font-weight: 700; color: #059669;"><i class="fa-solid fa-circle-check"></i> 3 Mitra Resmi Terverifikasi</span>
+                <span>✨ Exclusive for Bali Phone Repair clients</span>
+                <span style="font-weight: 700; color: #059669;"><i class="fa-solid fa-circle-check"></i> 3 Verified Official Partners</span>
               </div>
             </div>
           </div>

@@ -12,6 +12,7 @@ Artisan::command('seo:indexnow', function () {
         "https://{$host}/",
         "https://{$host}/llms.txt",
         "https://{$host}/services",
+        "https://{$host}/partners",
         "https://{$host}/services/iphone-repair-bali",
         "https://{$host}/services/macbook-repair-bali",
         "https://{$host}/services/android-repair-bali",

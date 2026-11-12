@@ -114,6 +114,44 @@ class PublicController extends Controller
         return view('public.location', ['location' => $serviceArea]);
     }
 
+    public function partners()
+    {
+        $partners = [
+            [
+                'name' => 'Puco Rooftop',
+                'category' => 'Cafe, Rooftop Lounge & Coworking',
+                'logo' => 'assets/images/partners/puco-rooftop.webp',
+                'location' => 'Bali',
+                'benefit' => 'Tempat Nyaman Menunggu Servis & Diskon F&B',
+                'description' => 'Nikmati suasana rooftop yang estetik dengan aneka hidangan kopi dan makanan lezat sambil menunggu pengerjaan servis perangkat Anda.',
+                'badge' => 'Verified Partner',
+                'highlight' => 'Chill & Wait Spot',
+            ],
+            [
+                'name' => 'Puri Canggu Rooms',
+                'category' => 'Boutique Stay & Villa Rooms',
+                'logo' => 'assets/images/partners/puri-canggu-rooms.webp',
+                'location' => 'Canggu, Bali',
+                'benefit' => 'Layanan Home Service Prioritas & Promo Stay',
+                'description' => 'Akomodasi tenang dan nyaman di pusat Canggu. Tamu yang menginap mendapatkan akses panggilan teknisi Bali Phone Repair langsung ke kamar.',
+                'badge' => 'Verified Partner',
+                'highlight' => 'Stay & Repair',
+            ],
+            [
+                'name' => 'Warung Dangin',
+                'category' => 'Kuliner Otentik Bali & Resto',
+                'logo' => 'assets/images/partners/warung-dangin.webp',
+                'location' => 'Bali',
+                'benefit' => 'Voucher Diskon Makanan Khusus Customer BPR',
+                'description' => 'Sajian kuliner khas Bali dengan cita rasa otentik bumbu warisan. Tunjukkan nota/chat servis BPR untuk klaim keuntungan spesial.',
+                'badge' => 'Verified Partner',
+                'highlight' => 'Dining Benefit',
+            ],
+        ];
+
+        return view('public.partners', compact('partners'));
+    }
+
     public function sitemap()
     {
         $services = Service::publiclyIndexable()->get();

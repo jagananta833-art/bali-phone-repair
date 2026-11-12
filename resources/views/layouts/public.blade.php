@@ -89,6 +89,7 @@
         <a href="{{ route('home') }}#how-it-works">How It Works</a>
         <a href="{{ route('home') }}#faq">FAQ</a>
         <a href="{{ route('blog') }}">Blog</a>
+        <a href="{{ route('partners.index') }}">Partner</a>
         <details class="nav-explore">
             <summary>More</summary>
             <div class="nav-dropdown">

@@ -19,6 +19,7 @@ Route::get('/about', [PublicController::class, 'pageBySlug'])->defaults('slug', 
 Route::get('/contact', [PublicController::class, 'pageBySlug'])->defaults('slug', 'contact')->name('contact');
 Route::get('/blog', [PublicController::class, 'blog'])->name('blog');
 Route::get('/blog/{post:slug}', [PublicController::class, 'post'])->name('posts.show');
+Route::get('/partners', [PublicController::class, 'partners'])->name('partners.index');
 Route::get('/service-areas', [PublicController::class, 'serviceAreas'])->name('areas.index');
 Route::get('/service-areas/{serviceArea:slug}', [PublicController::class, 'location'])->name('areas.show');
 Route::get('/locations/{serviceArea:slug}', [PublicController::class, 'location'])->name('locations.show');

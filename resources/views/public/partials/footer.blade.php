@@ -37,6 +37,7 @@
                 <a href="{{ route('services.index') }}">Services</a>
                 <a href="{{ route('about') }}">About Us</a>
                 <a href="{{ route('blog') }}">Blog</a>
+                <a href="{{ route('partners.index') }}">Partners</a>
                 <a href="{{ route('areas.index') }}">Service Areas</a>
                 <a href="{{ route('areas.index') }}">Home Care</a>
                 <a href="{{ route('home') }}#harga">Pricing</a>

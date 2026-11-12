@@ -616,7 +616,7 @@
                   <p class="partner-trio-sub">Cafe, Rooftop Lounge &amp; Coworking &bull; Bali</p>
                   <div class="partner-trio-perk">
                     <i class="fa-solid fa-gift"></i>
-                    <span>Tempat Nyaman Menunggu Servis &amp; Diskon F&amp;B</span>
+                    <span>Spacious Coworking space while you work remotely from Bali.</span>
                   </div>
                 </div>
               </div>
@@ -695,8 +695,8 @@
               </div>
             </div>
             <div class="pcard-perk-box">
-              <strong><i class="fa-solid fa-mug-hot"></i> Chill &amp; Wait Benefit</strong>
-              <p>Tempat santai menunggu servis + Diskon F&amp;B khusus pelanggan BPR.</p>
+              <strong><i class="fa-solid fa-laptop"></i> Coworking &amp; Remote Work</strong>
+              <p>Spacious Coworking space while you work remotely from Bali.</p>
             </div>
             <p class="pcard-desc">
               Nikmati suasana rooftop estetik dengan aneka hidangan kopi dan makanan lezat sambil menunggu pengerjaan servis perangkat Anda selesai dengan aman.

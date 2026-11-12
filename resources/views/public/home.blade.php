@@ -1815,7 +1815,7 @@
                     <p style="font-size: 12px; color: var(--color-gray-600); margin: 0 0 5px;">Cafe, Rooftop Lounge &amp; Coworking &bull; Bali</p>
                     <div style="display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; color: #047857; background: #ecfdf5; border: 1px solid #a7f3d0; padding: 2px 8px; border-radius: 6px;">
                       <i class="fa-solid fa-gift"></i>
-                      <span>Diskon F&amp;B sambil menunggu servis</span>
+                      <span>Spacious Coworking space while you work remotely from Bali.</span>
                     </div>
                   </div>
                 </div>

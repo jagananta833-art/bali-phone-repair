@@ -634,7 +634,7 @@
                   <p class="partner-trio-sub">Boutique Stay &amp; Villa Rooms &bull; Canggu</p>
                   <div class="partner-trio-perk">
                     <i class="fa-solid fa-gift"></i>
-                    <span>Home Service Prioritas ke Kamar + Promo Menginap</span>
+                    <span>Affordable stay in Canggu. Cashback Voucher</span>
                   </div>
                 </div>
               </div>
@@ -719,7 +719,7 @@
             </div>
             <div class="pcard-perk-box">
               <strong><i class="fa-solid fa-bed"></i> Stay &amp; Repair Benefit</strong>
-              <p>Layanan home service prioritas ke kamar villa + Promo menginap spesial.</p>
+              <p>Affordable stay in Canggu. Cashback Voucher</p>
             </div>
             <p class="pcard-desc">
               Akomodasi tenang dan nyaman di pusat Canggu. Tamu yang menginap mendapatkan akses panggilan teknisi Bali Phone Repair langsung ke kamar dalam 30–60 menit.

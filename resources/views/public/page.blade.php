@@ -9,8 +9,8 @@
 <main>
     <section class="section inner-hero">
         <div class="inner-wrap">
-            <div class="breadcrumb"><a href="{{ route('home') }}">Home</a><span>/</span><span>{{ $page->title }}</span></div>
-            <p class="eyebrow">{{ $page->focus_keyword ?: 'Bali Phone Repair' }}</p>
+            <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{{ route('home') }}">Home</a><span>/</span><span aria-current="page">{{ $page->title }}</span></nav>
+            <span class="section-eyebrow-pill"><i class="fa-solid fa-circle-info"></i> {{ $page->focus_keyword ?: 'Bali Phone Repair' }}</span>
             <h1>{{ $page->title }}</h1>
             @if($page->excerpt)<p class="hero-text">{{ $page->excerpt }}</p>@endif
         </div>

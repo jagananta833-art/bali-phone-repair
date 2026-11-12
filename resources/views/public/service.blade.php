@@ -37,7 +37,7 @@
                 <span>/</span>
                 <span aria-current="page">{{ $service->name }}</span>
             </nav>
-            <p class="eyebrow">{{ $service->focus_keyword ?: 'Repair service' }}</p>
+            <span class="section-eyebrow-pill"><i class="fa-solid fa-screwdriver-wrench"></i> {{ $service->focus_keyword ?: 'Repair Service' }}</span>
             <h1>{{ $service->name }}</h1>
             <p class="hero-text">{{ $service->short_description }}</p>
         </div>
@@ -89,17 +89,19 @@
 
     @if($service->faqs->isNotEmpty())
         <section class="section faq detail-section" aria-labelledby="service-faq-heading">
-            <div class="faq-intro">
-                <p class="eyebrow">FAQ</p>
-                <h2 id="service-faq-heading">Questions about {{ $service->name }}</h2>
-            </div>
-            <div class="faq-list">
-                @foreach($service->faqs as $faq)
-                    <details>
-                        <summary>{{ $faq->question }}</summary>
-                        <p>{{ $faq->answer }}</p>
-                    </details>
-                @endforeach
+            <div class="inner-wrap">
+                <div class="faq-intro" style="margin-bottom: 24px;">
+                    <span class="section-eyebrow-pill"><i class="fa-solid fa-circle-question"></i> FAQ</span>
+                    <h2 id="service-faq-heading">Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-list">
+                    @foreach($service->faqs as $faq)
+                        <details>
+                            <summary>{{ $faq->question }}</summary>
+                            <p>{{ $faq->answer }}</p>
+                        </details>
+                    @endforeach
+                </div>
             </div>
         </section>
     @endif
@@ -107,9 +109,9 @@
     @if($service->relatedServices->isNotEmpty())
         <section class="section detail-section" aria-labelledby="related-services-heading">
             <div class="inner-wrap">
-                <div class="section-heading">
-                    <p class="eyebrow">Related services</p>
-                    <h2 id="related-services-heading">Other relevant services</h2>
+                <div class="section-heading" style="margin-bottom: 24px;">
+                    <span class="section-eyebrow-pill"><i class="fa-solid fa-layer-group"></i> Related Services</span>
+                    <h2 id="related-services-heading">Other Relevant Services</h2>
                 </div>
                 <div class="service-list">
                     @foreach($service->relatedServices as $relatedService)
@@ -124,7 +126,7 @@
                                 data-analytics-source-type="service"
                                 data-analytics-source-id="{{ $service->id }}"
                                 data-analytics-target-service-id="{{ $relatedService->id }}"
-                                data-analytics-link-position="{{ $loop->iteration }}">Open service</a>
+                                data-analytics-link-position="{{ $loop->iteration }}">Open service →</a>
                         </article>
                     @endforeach
                 </div>
@@ -135,8 +137,8 @@
     @if($service->serviceAreas->isNotEmpty())
         <section class="section detail-section" aria-labelledby="service-areas-heading">
             <div class="inner-wrap inner-card">
-                <p class="eyebrow">Available in Bali</p>
-                <h2 id="service-areas-heading">Available service areas</h2>
+                <span class="section-eyebrow-pill"><i class="fa-solid fa-location-dot"></i> Bali Coverage</span>
+                <h2 id="service-areas-heading">Available Service Areas in Bali</h2>
                 <div class="link-list">
                     @foreach($service->serviceAreas as $area)
                         <a

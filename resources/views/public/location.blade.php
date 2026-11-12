@@ -40,7 +40,7 @@
                 <a href="{{ route('areas.index') }}">Locations</a><span>/</span>
                 <span aria-current="page">{{ $location->name }}</span>
             </nav>
-            <p class="eyebrow">Location</p>
+            <span class="section-eyebrow-pill"><i class="fa-solid fa-location-dot"></i> Service Location</span>
             <h1>{{ $location->name }}</h1>
             <p class="hero-text">{{ $location->description }}</p>
         </div>

@@ -177,19 +177,108 @@
 
 @push('styles')
 <style>
-.article-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:18px;color:var(--muted);font-size:14px}.article-meta span{display:inline-flex;align-items:center}.article-final-cta{margin-top:34px;padding:26px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.04)}.article-final-cta h2{margin-top:6px}.article-cta-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}@media(max-width:640px){.article-cta-actions{display:grid}.article-cta-actions .btn{width:100%}}
+.article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin-top: 16px;
+    color: var(--color-gray-600);
+    font-size: 14px;
+}
+.article-meta span {
+    display: inline-flex;
+    align-items: center;
+}
+.article-final-cta {
+    margin-top: 36px;
+    padding: 28px;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 16px;
+    background: #f8fafc;
+}
+.article-final-cta h2 {
+    margin-top: 8px;
+    font-size: 22px;
+    color: var(--color-gray-900);
+}
+.article-final-cta p {
+    color: var(--color-gray-600);
+}
+.article-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+@media(max-width:640px){
+    .article-cta-actions { display: grid; }
+    .article-cta-actions .btn { width: 100%; }
+}
 
 /* Styling Khusus GEO & AI Citations */
-.content-body .geo-summary{padding:18px 22px;margin:24px 0 30px;background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid var(--admin-gold, #D4A346);border-radius:0 12px 12px 0;font-size:16.5px;line-height:1.75;color:#1e293b}
-.content-body .geo-summary strong{color:#854d0e;display:inline-block;margin-right:4px}
-.content-body .faq-section{margin:36px 0;padding:24px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px}
-.content-body .faq-section h3{margin-top:0;color:#0f172a;font-size:19px}
-.content-body .faq-section p{margin-bottom:16px;color:#334155}
-.content-body .faq-section p:last-child{margin-bottom:0}
-.content-body table{width:100%;border-collapse:collapse;margin:28px 0;border-radius:12px;overflow:hidden;border:1px solid #e2e8f0;background:#ffffff}
-.content-body th{background:#f1f5f9;color:#0f172a;font-weight:750;text-align:left;padding:12px 16px;border-bottom:2px solid #cbd5e1;font-size:14px}
-.content-body td{padding:12px 16px;border-bottom:1px solid #f1f5f9;color:#334155;font-size:14.5px;line-height:1.6}
-.content-body tr:hover td{background:#f8fafc}
+.content-body .geo-summary {
+    padding: 18px 22px;
+    margin: 24px 0 30px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid var(--primary-gold, #D4A346);
+    border-radius: 0 12px 12px 0;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #1e293b;
+}
+.content-body .geo-summary strong {
+    color: #854d0e;
+    display: inline-block;
+    margin-right: 4px;
+}
+.content-body .faq-section {
+    margin: 36px 0;
+    padding: 24px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+}
+.content-body .faq-section h3 {
+    margin-top: 0;
+    color: #0f172a;
+    font-size: 19px;
+}
+.content-body .faq-section p {
+    margin-bottom: 16px;
+    color: #334155;
+}
+.content-body .faq-section p:last-child {
+    margin-bottom: 0;
+}
+.content-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 28px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+}
+.content-body th {
+    background: #f1f5f9;
+    color: #0f172a;
+    font-weight: 750;
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 2px solid #cbd5e1;
+    font-size: 14px;
+}
+.content-body td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+    font-size: 14.5px;
+    line-height: 1.6;
+}
+.content-body tr:hover td {
+    background: #f8fafc;
+}
 </style>
 @endpush
 

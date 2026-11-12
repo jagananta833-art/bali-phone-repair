@@ -6,10 +6,10 @@
 <main>
     <section class="section inner-hero compact">
         <div class="inner-wrap">
-            <div class="breadcrumb"><a href="{{ route('home') }}">Home</a><span>/</span><span>Services</span></div>
-            <p class="eyebrow">Repair services</p>
-            <h1>Device repair services in Bali</h1>
-            <p class="hero-text">Choose a service page for device-specific repair guidance, common symptoms, diagnostics, WhatsApp booking, and related support areas.</p>
+            <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{{ route('home') }}">Home</a><span>/</span><span aria-current="page">Services</span></nav>
+            <span class="section-eyebrow-pill"><i class="fa-solid fa-wrench"></i> Repair Services</span>
+            <h1>Device Repair Services in Bali</h1>
+            <p class="hero-text">Professional on-demand repair solutions for iPhone, MacBook, Android, iPad, and Windows laptops across Bali with certified walk-in workshops and mobile villa dispatch.</p>
         </div>
     </section>
     <section class="section services-list-section">
@@ -28,20 +28,22 @@
             {{ $services->links() }}
         </div>
     </section>
-    <section class="section split">
-        <div class="inner-card">
-            <p class="eyebrow">Bali coverage</p>
-            <h2>Service support by area</h2>
-            <p>Share your location when contacting us so the team can confirm service options, timing, and the most practical next step.</p>
-            <div class="area-tags">
-                @foreach($areas as $area)<span>{{ $area->name }}</span>@endforeach
+    <section class="section">
+        <div class="inner-wrap split">
+            <div class="inner-card">
+                <span class="section-eyebrow-pill"><i class="fa-solid fa-map-pin"></i> Bali Coverage</span>
+                <h2>Service support by area</h2>
+                <p>Share your location when contacting us so the team can confirm service options, timing, and the most practical next step.</p>
+                <div class="area-tags">
+                    @foreach($areas as $area)<span>{{ $area->name }}</span>@endforeach
+                </div>
             </div>
-        </div>
-        <div class="inner-card">
-            <p class="eyebrow">Need help now?</p>
-            <h2>Ask for an estimate</h2>
-            <p>Send device model, issue, photos, and location by WhatsApp.</p>
-            <a class="btn btn-primary" href="https://wa.me/{{ preg_replace('/\D+/', '', $siteSettings['whatsapp'] ?? '6281929164999') }}" target="_blank" rel="noreferrer" data-analytics-event="whatsapp_click" data-analytics-location="services_footer">Chat WhatsApp</a>
+            <div class="inner-card">
+                <span class="section-eyebrow-pill"><i class="fa-solid fa-calculator"></i> Need help now?</span>
+                <h2>Ask for an estimate</h2>
+                <p>Send your device model, issue, photos, and location via WhatsApp for an immediate free diagnostic estimate.</p>
+                <a class="btn btn-primary" href="https://wa.me/{{ preg_replace('/\D+/', '', $siteSettings['whatsapp'] ?? '6281929164999') }}" target="_blank" rel="noreferrer" data-analytics-event="whatsapp_click" data-analytics-location="services_footer"><i class="fa-brands fa-whatsapp"></i> Chat WhatsApp</a>
+            </div>
         </div>
     </section>
 </main>

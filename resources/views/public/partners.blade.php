@@ -7,8 +7,8 @@
         ? '+'.preg_replace('/\D+/', '', $phone)
         : null;
     $email = $siteSettings['email'] ?? 'hello@baliphonerepair.com';
-    $title = 'Our Partners - Book Your Repair Now, Get More Benefit at Our Partners | Bali Phone Repair';
-    $description = 'Jaringan mitra resmi UMKM Bali Phone Repair. Dapatkan benefit eksklusif di Puco Rooftop, Puri Canggu Rooms, Warung Dangin, dan mitra gaya hidup terkemuka di Bali.';
+    $title = 'Our Verified Partners - Book Your Repair Now, Get More Benefit at Our Partners | Bali Phone Repair';
+    $description = 'Jaringan 3 mitra resmi UMKM Bali Phone Repair: Puco Rooftop, Puri Canggu Rooms, dan Warung Dangin. Dapatkan diskon F&B, promo stay villa, dan voucher makan khusus customer BPR.';
     $canonical = route('partners.index');
 @endphp
 <!doctype html>
@@ -21,40 +21,47 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="{{ $canonical }}" />
   <meta name="author" content="jagananta833-art" />
-  <meta name="copyright" content="Bali Phone Repair • Exclusively Maintained by jagananta833-art" />
+  <meta name="copyright" content="Bali Phone Repair &bull; Exclusively Maintained by jagananta833-art" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="{{ $businessName }}" />
   <meta property="og:title" content="{{ $title }}" />
   <meta property="og:description" content="{{ $description }}" />
   <meta property="og:url" content="{{ $canonical }}" />
-  <meta property="og:image" content="{{ asset('assets/images/partners/ecosystem-partners-grid.webp') }}" />
+  <meta property="og:image" content="{{ asset('assets/images/partners/puco-rooftop.webp') }}" />
   <meta name="twitter:card" content="summary_large_image" />
-
+  <meta name="twitter:title" content="{{ $title }}" />
+  <meta name="twitter:description" content="{{ $description }}" />
+  <meta name="twitter:image" content="{{ asset('assets/images/partners/puco-rooftop.webp') }}" />
   @include('public.partials.analytics-head')
-  <link rel="icon" type="image/jpeg" href="{{ asset($assetBase.'logo-optimized.jpg') }}" />
+  <link rel="icon" type="image/jpeg" href="{{ asset($assetBase.'logo-optimized.jpg') }}?v=20260711-favicon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="{{ asset($assetBase.'styles-improved.css') }}?v={{ time() }}" />
+  <link rel="stylesheet" href="{{ asset($assetBase.'styles-improved.css') }}?v=partners-v3" />
 
   <style>
     :root {
       --primary-gold: #D4A346;
+      --gold-gradient: linear-gradient(135deg, #F5D061 0%, #D4A346 50%, #B8860B 100%);
+      --gold-gradient-hover: linear-gradient(135deg, #FAE292 0%, #E5B24E 50%, #C69214 100%);
       --primary-blue: #2563eb;
-      --color-gray-900: #0f172a;
-      --color-gray-700: #334155;
-      --color-gray-600: #475569;
-      --color-gray-200: #e2e8f0;
-      --color-gray-100: #f8fafc;
-      --color-white: #ffffff;
-      --accent-green: #1e3a34;
+      --primary-blue-hover: #1d4ed8;
+      --color-dark: #0f172a;
+      --color-gray-900: #111827;
+      --color-gray-800: #1f2937;
+      --color-gray-700: #374151;
+      --color-gray-600: #4b5563;
+      --color-gray-200: #e5e7eb;
+      --color-gray-100: #f3f4f6;
+      --color-gray-50: #f9fafb;
     }
 
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: var(--color-white);
+      background-color: #ffffff;
       color: var(--color-gray-900);
       -webkit-font-smoothing: antialiased;
-      line-height: 1.5;
+      line-height: 1.6;
+      padding-top: 68px;
     }
 
     a { text-decoration: none; color: inherit; }
@@ -66,7 +73,7 @@
       left: 0;
       right: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.98);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--color-gray-200);
@@ -94,14 +101,14 @@
     }
     .brand-text-block strong {
       display: block;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 800;
       color: var(--color-gray-900);
       line-height: 1.2;
     }
     .brand-text-block small {
       display: block;
-      font-size: 11px;
+      font-size: 12px;
       color: var(--color-gray-600);
     }
     .nav-links-desktop {
@@ -136,17 +143,19 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, #F5D061 0%, #D4A346 50%, #B8860B 100%);
+      background: var(--gold-gradient);
       color: #0f172a;
       padding: 9px 18px;
       border-radius: 999px;
       font-weight: 700;
-      font-size: 13px;
-      box-shadow: 0 4px 10px rgba(212, 163, 70, 0.25);
-      transition: transform .2s ease;
+      font-size: 13.5px;
+      box-shadow: 0 4px 14px rgba(212, 163, 70, 0.35);
+      transition: all .2s ease;
     }
     .btn-quote-pill:hover {
+      background: var(--gold-gradient-hover);
       transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(212, 163, 70, 0.5);
     }
     .mobile-menu-btn {
       display: none;
@@ -158,35 +167,31 @@
     }
 
     /* Reference Style Layout Elements */
-    .partner-hero-section {
-      padding: 110px 20px 60px;
-      max-width: 1240px;
-      margin: 0 auto;
-    }
-    .partner-top-meta {
+    .partner-top-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 36px;
       padding-bottom: 16px;
       border-bottom: 1px solid var(--color-gray-200);
+      margin-bottom: 40px;
     }
-    .partner-top-title {
+    .partner-top-tag-left {
       font-size: 15px;
       font-weight: 800;
-      color: var(--accent-green);
-      letter-spacing: 2px;
+      color: #1e3a34;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
     }
-    .partner-top-perks {
+    .partner-top-tag-right {
       font-size: 14px;
       font-weight: 700;
-      color: var(--accent-green);
-      letter-spacing: 1px;
+      color: #1e3a34;
+      letter-spacing: 1.5px;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
+
     .partner-split-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -214,39 +219,280 @@
       line-height: 1.7;
       margin: 0 0 16px;
     }
-    .partner-logo-canvas {
+
+    /* Right Column: 3-Partner Canvas */
+    .partner-trio-canvas {
       background: #ffffff;
       border: 1px solid var(--color-gray-200);
       border-radius: 20px;
       padding: 24px;
-      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
-      position: relative;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
     }
-    .partner-featured-strip {
+    .partner-trio-canvas-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #f1f5f9;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .trio-badge-top {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #1e3a34;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .trio-perks-status {
+      font-size: 12px;
+      font-weight: 700;
+      color: #059669;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .partner-trio-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .partner-trio-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 16px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      transition: all .2s ease;
+    }
+    .partner-trio-item:hover {
+      background: #ffffff;
+      border-color: #cbd5e1;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      transform: translateY(-2px);
+    }
+    .partner-trio-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      margin-bottom: 20px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid #f1f5f9;
-      flex-wrap: wrap;
+      flex-shrink: 0;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
     }
-    .pill-partner-badge {
+    .partner-trio-logo.dark-bg {
+      background: #0f172a;
+    }
+    .partner-trio-logo.light-bg {
+      background: #f1f5f9;
+    }
+    .partner-trio-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .partner-trio-logo img.img-contain {
+      object-fit: contain;
+      padding: 6px;
+    }
+    .partner-trio-detail {
+      flex: 1;
+      min-width: 0;
+    }
+    .partner-trio-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 2px;
+    }
+    .partner-trio-meta strong {
+      font-size: 15.5px;
+      font-weight: 800;
+      color: var(--color-gray-900);
+    }
+    .partner-tag-pill {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+    .tag-chill {
+      background: #0f172a;
+      color: #ffffff;
+    }
+    .tag-stay {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+    }
+    .tag-dine {
+      background: #fffbeb;
+      color: #b45309;
+      border: 1px solid #fde68a;
+    }
+    .partner-trio-sub {
+      font-size: 12.5px;
+      color: var(--color-gray-600);
+      margin: 0 0 6px;
+    }
+    .partner-trio-perk {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      border-radius: 999px;
+      gap: 6px;
       font-size: 12px;
+      font-weight: 600;
+      color: #047857;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      padding: 3px 10px;
+      border-radius: 6px;
+      max-width: 100%;
+    }
+    .partner-trio-perk span {
+      white-space: normal;
+    }
+    .partner-trio-canvas-footer {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--color-gray-200);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11.5px;
+      color: var(--color-gray-600);
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .trio-claim-hint {
       font-weight: 700;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+      color: #059669;
     }
 
-    @media (max-width: 900px) {
+    /* Detailed 3-Partner Cards Section */
+    .partner-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 36px;
+    }
+    .partner-full-card {
+      background: #ffffff;
+      border: 1px solid var(--color-gray-200);
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      transition: all .25s ease;
+    }
+    .partner-full-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+      border-color: #cbd5e1;
+    }
+    .pcard-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .pcard-logo-box {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid #e2e8f0;
+    }
+    .pcard-logo-box.dark { background: #0f172a; }
+    .pcard-logo-box.light { background: #f8fafc; }
+    .pcard-logo-box img { width: 100%; height: 100%; object-fit: cover; }
+    .pcard-logo-box img.contain { object-fit: contain; padding: 6px; }
+    .pcard-title h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--color-gray-900);
+      margin: 0 0 4px;
+    }
+    .pcard-title span {
+      font-size: 13px;
+      color: var(--color-gray-500);
+    }
+    .pcard-perk-box {
+      background: #fffdf5;
+      border: 1px solid #fde68a;
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+    }
+    .pcard-perk-box strong {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      color: #b45309;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      margin-bottom: 4px;
+    }
+    .pcard-perk-box p {
+      margin: 0;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #92400e;
+      line-height: 1.5;
+    }
+    .pcard-desc {
+      font-size: 14px;
+      color: var(--color-gray-600);
+      line-height: 1.6;
+      margin: 0 0 20px;
+      flex-grow: 1;
+    }
+    .pcard-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 11px;
+      border-radius: 999px;
+      font-size: 13.5px;
+      font-weight: 700;
+      box-sizing: border-box;
+      border: 1px solid var(--color-gray-200);
+      background: var(--color-gray-50);
+      color: var(--color-gray-800);
+      transition: all .2s;
+    }
+    .pcard-action:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    @media (max-width: 980px) {
       .partner-split-grid {
         grid-template-columns: 1fr;
         gap: 36px;
+      }
+      .partner-cards-grid {
+        grid-template-columns: 1fr;
       }
       .nav-links-desktop { display: none; }
       .nav-links-desktop.show-mobile {
@@ -305,16 +551,16 @@
   </header>
 
   <main>
-    <!-- REFERENCE-MATCHING PARTNER SHOWCASE SECTION -->
-    <section class="partner-hero-section">
-      <!-- TOP BAR (EXACT REFERENCE: OUR PARTNERS // MORE BENEFITS) -->
-      <div class="partner-top-meta">
-        <span class="partner-top-title">OUR PARTNERS</span>
-        <span class="partner-top-perks">🍀 // MORE BENEFITS</span>
+    <!-- TOP EDITORIAL SPLIT SECTION (EXACT REFERENCE DESIGN) -->
+    <section style="padding: 44px 20px 60px; max-width: 1240px; margin: 0 auto;">
+      <!-- TOP META BAR: OUR PARTNERS // MORE BENEFITS -->
+      <div class="partner-top-bar">
+        <span class="partner-top-tag-left">OUR PARTNERS</span>
+        <span class="partner-top-tag-right">🍀 // MORE BENEFITS</span>
       </div>
 
       <div class="partner-split-grid">
-        <!-- LEFT COLUMN: EDITORIAL NARRATIVE -->
+        <!-- LEFT COLUMN: EDITORIAL LIFESTYLE COPY -->
         <div class="partner-left-content">
           <h1>
             Book your repair now <br>
@@ -326,11 +572,11 @@
           </p>
 
           <p class="partner-body-p">
-            At <strong>Bali Phone Repair</strong>, we believe that community goes beyond our workshop walls. That's why we've partnered with amazing local brands, wellness studios, boutique stays, and lifestyle spots across Bali to bring extra benefits for our clients.
+            At <strong>Bali Phone Repair</strong>, we believe that community goes beyond our workshop walls. That's why we've partnered with verified local lifestyle spots, cafes, and boutique stays across Bali to bring extra benefits for our clients.
           </p>
 
           <p class="partner-body-p">
-            From exclusive discounts and complimentary treats, to special invitations and customer-only experiences, our partnerships are designed to make your Bali journey even more rewarding — inside and outside our hubs, while your device is being expertly restored.
+            From exclusive discounts and complimentary treats, to priority villa service and customer-only dining privileges, our 3 official partnerships are designed to make your Bali journey even more rewarding while your device is being expertly restored.
           </p>
 
           <p class="partner-body-p">
@@ -348,35 +594,163 @@
           </div>
         </div>
 
-        <!-- RIGHT COLUMN: CLEAN LOGO GRID BOARD (EXACT REFERENCE ARRANGEMENT) -->
+        <!-- RIGHT COLUMN: 3 VERIFIED PARTNERS CANVAS (ONLY THE 3 ACTUAL PARTNERS) -->
         <div>
-          <div class="partner-logo-canvas">
-            <!-- Featured Key Partners Spotlight Badges -->
-            <div class="partner-featured-strip">
-              <span class="pill-partner-badge" style="background: #0f172a; color: #ffffff;">
-                <img src="{{ asset('assets/images/partners/puco-rooftop.webp') }}" alt="Puco Rooftop" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover;" />
-                Puco Rooftop &bull; Cafe &amp; Cowork
-              </span>
-              <span class="pill-partner-badge" style="background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">
-                <img src="{{ asset('assets/images/partners/puri-canggu-rooms.webp') }}" alt="Puri Canggu Rooms" style="width: 22px; height: 22px; border-radius: 4px; object-fit: cover;" />
-                Puri Canggu &bull; Rooms &amp; Stay
-              </span>
-              <span class="pill-partner-badge" style="background: #0f172a; color: #f59e0b;">
-                <img src="{{ asset('assets/images/partners/warung-dangin.webp') }}" alt="Warung Dangin" style="height: 14px; width: auto; object-fit: contain;" />
-                Warung Dangin &bull; Bali Resto
-              </span>
+          <div class="partner-trio-canvas">
+            <div class="partner-trio-canvas-header">
+              <span class="trio-badge-top"><i class="fa-solid fa-handshake"></i> Official Verified Partners (3)</span>
+              <span class="trio-perks-status"><i class="fa-solid fa-circle-check"></i> Active Customer Perks</span>
             </div>
 
-            <!-- Crisp Logo Grid Layout matching Reference -->
-            <div style="background: #ffffff; padding: 12px 8px; border-radius: 12px;">
-              <img src="{{ asset('assets/images/partners/ecosystem-partners-grid.webp') }}" alt="Bali Phone Repair UMKM Partner Network - Puri Canggu, Warung Dangin, Indodax, Deskimo, Canggu Studio, Vault, Villa Youlas, Boho, Bookspace, Levera, Dentiq, Surf Bali Hub, Alchemy" style="width: 100%; height: auto; display: block; border-radius: 8px;" loading="lazy" decoding="async">
+            <div class="partner-trio-list">
+              <!-- Partner 1: Puco Rooftop -->
+              <div class="partner-trio-item">
+                <div class="partner-trio-logo dark-bg">
+                  <img src="{{ asset('assets/images/partners/puco-rooftop.webp') }}" alt="Puco Rooftop" />
+                </div>
+                <div class="partner-trio-detail">
+                  <div class="partner-trio-meta">
+                    <strong>Puco Rooftop</strong>
+                    <span class="partner-tag-pill tag-chill">Chill &amp; Wait Spot</span>
+                  </div>
+                  <p class="partner-trio-sub">Cafe, Rooftop Lounge &amp; Coworking &bull; Bali</p>
+                  <div class="partner-trio-perk">
+                    <i class="fa-solid fa-gift"></i>
+                    <span>Tempat Nyaman Menunggu Servis &amp; Diskon F&amp;B</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Partner 2: Puri Canggu Rooms -->
+              <div class="partner-trio-item">
+                <div class="partner-trio-logo light-bg">
+                  <img src="{{ asset('assets/images/partners/puri-canggu-rooms.webp') }}" alt="Puri Canggu Rooms" />
+                </div>
+                <div class="partner-trio-detail">
+                  <div class="partner-trio-meta">
+                    <strong>Puri Canggu Rooms</strong>
+                    <span class="partner-tag-pill tag-stay">Stay &amp; Repair</span>
+                  </div>
+                  <p class="partner-trio-sub">Boutique Stay &amp; Villa Rooms &bull; Canggu</p>
+                  <div class="partner-trio-perk">
+                    <i class="fa-solid fa-gift"></i>
+                    <span>Home Service Prioritas ke Kamar + Promo Menginap</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Partner 3: Warung Dangin -->
+              <div class="partner-trio-item">
+                <div class="partner-trio-logo dark-bg">
+                  <img src="{{ asset('assets/images/partners/warung-dangin.webp') }}" alt="Warung Dangin" class="img-contain" />
+                </div>
+                <div class="partner-trio-detail">
+                  <div class="partner-trio-meta">
+                    <strong>Warung Dangin</strong>
+                    <span class="partner-tag-pill tag-dine">Dining Benefit</span>
+                  </div>
+                  <p class="partner-trio-sub">Kuliner Otentik Bali &amp; Resto</p>
+                  <div class="partner-trio-perk">
+                    <i class="fa-solid fa-gift"></i>
+                    <span>Voucher Diskon Menu Otentik khusus customer BPR</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div style="margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--color-gray-200); display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: var(--color-gray-600);">
-              <span>✨ Official Verified Ecosystem</span>
-              <span style="font-weight: 700; color: #059669;"><i class="fa-solid fa-circle-check"></i> Active Customer Benefits</span>
+            <div class="partner-trio-canvas-footer">
+              <span>✨ Eksklusif untuk pelanggan Bali Phone Repair</span>
+              <span class="trio-claim-hint">Tunjukkan nota/chat servis untuk klaim</span>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILED 3 PARTNER CARDS SHOWCASE -->
+    <section style="padding: 50px 20px 70px; background: #ffffff; border-top: 1px solid var(--color-gray-200);">
+      <div style="max-width: 1240px; margin: 0 auto;">
+        <div style="text-align: center; max-width: 720px; margin: 0 auto 36px;">
+          <span class="section-eyebrow-pill" style="display: inline-flex; align-items: center; gap: 6px; background: #fffbeb; color: #b45309; border: 1px solid rgba(217, 119, 6, 0.25); font-size: 13px; font-weight: 800; padding: 5px 14px; border-radius: 999px;">
+            <i class="fa-solid fa-star"></i> Mitra Terverifikasi
+          </span>
+          <h2 style="font-size: clamp(26px, 3.5vw, 36px); font-weight: 800; color: var(--color-gray-900); margin: 12px 0 8px;">
+            Daftar Mitra Resmi &amp; Keuntungan Eksklusif
+          </h2>
+          <p style="color: var(--color-gray-600); font-size: 15.5px; margin: 0;">
+            Kunjungi mitra resmi kami di Bali untuk menikmati promo khusus setiap kali Anda melakukan perbaikan gadget di BPR.
+          </p>
+        </div>
+
+        <div class="partner-cards-grid">
+          <!-- Card 1: Puco Rooftop -->
+          <article class="partner-full-card">
+            <div class="pcard-header">
+              <div class="pcard-logo-box dark">
+                <img src="{{ asset('assets/images/partners/puco-rooftop.webp') }}" alt="Puco Rooftop" />
+              </div>
+              <div class="pcard-title">
+                <h3>Puco Rooftop</h3>
+                <span>Cafe, Lounge &amp; Coworking &bull; Bali</span>
+              </div>
+            </div>
+            <div class="pcard-perk-box">
+              <strong><i class="fa-solid fa-mug-hot"></i> Chill &amp; Wait Benefit</strong>
+              <p>Tempat santai menunggu servis + Diskon F&amp;B khusus pelanggan BPR.</p>
+            </div>
+            <p class="pcard-desc">
+              Nikmati suasana rooftop estetik dengan aneka hidangan kopi dan makanan lezat sambil menunggu pengerjaan servis perangkat Anda selesai dengan aman.
+            </p>
+            <a class="pcard-action" href="https://wa.me/{{ $whatsapp }}?text=Halo%20BPR%2C%20saya%20ingin%20tahu%20promo%20di%20Puco%20Rooftop" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-whatsapp" style="color: #059669;"></i> Tanya Promo Puco
+            </a>
+          </article>
+
+          <!-- Card 2: Puri Canggu Rooms -->
+          <article class="partner-full-card">
+            <div class="pcard-header">
+              <div class="pcard-logo-box light">
+                <img src="{{ asset('assets/images/partners/puri-canggu-rooms.webp') }}" alt="Puri Canggu Rooms" />
+              </div>
+              <div class="pcard-title">
+                <h3>Puri Canggu Rooms</h3>
+                <span>Boutique Stay &bull; Canggu, Bali</span>
+              </div>
+            </div>
+            <div class="pcard-perk-box">
+              <strong><i class="fa-solid fa-bed"></i> Stay &amp; Repair Benefit</strong>
+              <p>Layanan home service prioritas ke kamar villa + Promo menginap spesial.</p>
+            </div>
+            <p class="pcard-desc">
+              Akomodasi tenang dan nyaman di pusat Canggu. Tamu yang menginap mendapatkan akses panggilan teknisi Bali Phone Repair langsung ke kamar dalam 30–60 menit.
+            </p>
+            <a class="pcard-action" href="https://wa.me/{{ $whatsapp }}?text=Halo%20BPR%2C%20saya%20ingin%20servis%20di%20Puri%20Canggu%20Rooms" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-whatsapp" style="color: #059669;"></i> Servis ke Puri Canggu
+            </a>
+          </article>
+
+          <!-- Card 3: Warung Dangin -->
+          <article class="partner-full-card">
+            <div class="pcard-header">
+              <div class="pcard-logo-box dark">
+                <img src="{{ asset('assets/images/partners/warung-dangin.webp') }}" alt="Warung Dangin" class="contain" />
+              </div>
+              <div class="pcard-title">
+                <h3>Warung Dangin</h3>
+                <span>Kuliner Otentik Bali &amp; Resto</span>
+              </div>
+            </div>
+            <div class="pcard-perk-box">
+              <strong><i class="fa-solid fa-utensils"></i> Dining Privilege</strong>
+              <p>Voucher diskon santap menu otentik Bali khusus customer BPR.</p>
+            </div>
+            <p class="pcard-desc">
+              Sajian kuliner khas Bali dengan cita rasa otentik bumbu warisan. Cukup tunjukkan nota atau bukti chat servis BPR untuk klaim potongan harga spesial.
+            </p>
+            <a class="pcard-action" href="https://wa.me/{{ $whatsapp }}?text=Halo%20BPR%2C%20saya%20ingin%20klaim%20voucher%20Warung%20Dangin" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-whatsapp" style="color: #059669;"></i> Klaim Voucher Kuliner
+            </a>
+          </article>
         </div>
       </div>
     </section>
@@ -396,7 +770,7 @@
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; text-align: left;">
           <div style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 26px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);">
-            <div style="font-size: 32px; font-weight: 900; color: #2563eb; margin-bottom: 8px;">01</div>
+            <div style="font-size: 32px; font-weight: 900; color: var(--primary-blue); margin-bottom: 8px;">01</div>
             <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-gray-900); margin: 0 0 8px;">Book Your Repair</h3>
             <p style="color: var(--color-gray-600); font-size: 0.9rem; line-height: 1.6; margin: 0;">
               Hubungi tim teknisi kami lewat WhatsApp atau kunjungi workshop fisik BPR di Canggu atau Denpasar untuk servis perangkat Anda.
@@ -404,7 +778,7 @@
           </div>
 
           <div style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 26px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);">
-            <div style="font-size: 32px; font-weight: 900; color: #2563eb; margin-bottom: 8px;">02</div>
+            <div style="font-size: 32px; font-weight: 900; color: var(--primary-blue); margin-bottom: 8px;">02</div>
             <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-gray-900); margin: 0 0 8px;">Simpan Bukti Servis</h3>
             <p style="color: var(--color-gray-600); font-size: 0.9rem; line-height: 1.6; margin: 0;">
               Simpan bukti invoice resmi atau chat konfirmasi pengerjaan yang diberikan oleh tim teknisi Bali Phone Repair.
@@ -412,10 +786,10 @@
           </div>
 
           <div style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 26px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);">
-            <div style="font-size: 32px; font-weight: 900; color: #2563eb; margin-bottom: 8px;">03</div>
+            <div style="font-size: 32px; font-weight: 900; color: var(--primary-blue); margin-bottom: 8px;">03</div>
             <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-gray-900); margin: 0 0 8px;">Tunjukkan di Mitra Kami</h3>
             <p style="color: var(--color-gray-600); font-size: 0.9rem; line-height: 1.6; margin: 0;">
-              Datang ke lokasi mitra pilihan Anda di Bali dan tunjukkan bukti servis untuk menikmati diskon, promo santap, atau privilege langsung.
+              Datang ke lokasi Puco Rooftop, Puri Canggu Rooms, atau Warung Dangin dan tunjukkan bukti servis untuk menikmati diskon, promo santap, atau privilege langsung.
             </p>
           </div>
         </div>
@@ -431,7 +805,7 @@
         <p style="color: #94a3b8; font-size: 16px; line-height: 1.6; margin: 0 0 24px;">
           Mari berkolaborasi bersama jaringan pelanggan setia Bali Phone Repair. Dapatkan eksposur komunitas dan cross-benefit saling menguntungkan.
         </p>
-        <a href="https://wa.me/{{ $whatsapp }}?text=Halo%20Admin%20BPR%2C%20saya%20tertarik%20mengajukan%20kemitraan%20UMKM" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #F5D061 0%, #D4A346 50%, #B8860B 100%); color: #0f172a; padding: 13px 28px; border-radius: 999px; font-weight: 700; font-size: 15px; box-shadow: 0 6px 16px rgba(212, 163, 70, 0.35);">
+        <a href="https://wa.me/{{ $whatsapp }}?text=Halo%20Admin%20BPR%2C%20saya%20tertarik%20mengajukan%20kemitraan%20UMKM" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center; gap: 8px; background: var(--gold-gradient); color: #0f172a; padding: 13px 28px; border-radius: 999px; font-weight: 700; font-size: 15px; box-shadow: 0 6px 16px rgba(212, 163, 70, 0.35);">
           <i class="fa-brands fa-whatsapp" style="font-size: 1.2em;"></i>
           <span>Hubungi Kami untuk Kemitraan</span>
         </a>

@@ -1789,43 +1789,81 @@
             </div>
           </div>
 
-          <!-- Right: Logo Board Canvas -->
+          <!-- Right: 3 Verified Partners Canvas (ONLY the 3 actual partners) -->
           <div>
-            <div style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 20px; padding: 22px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);">
-              <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid #f1f5f9; flex-wrap: wrap;">
-                <span style="display: inline-flex; align-items: center; gap: 8px; background: #0f172a; color: #ffffff; padding: 6px 12px; border-radius: 999px; font-size: 11px; font-weight: 700;">
-                  <img src="{{ asset('assets/images/partners/puco-rooftop.webp') }}" alt="Puco Rooftop" style="width: 20px; height: 20px; border-radius: 50%; object-fit: cover;" />
-                  Puco Rooftop
+            <div style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 20px; padding: 24px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);">
+              <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 14px; margin-bottom: 16px; border-bottom: 1px solid #f1f5f9; flex-wrap: wrap; gap: 8px;">
+                <span style="font-size: 12.5px; font-weight: 800; color: #1e3a34; letter-spacing: 1px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 6px;">
+                  <i class="fa-solid fa-handshake"></i> Verified UMKM Partners (3)
                 </span>
-                <span style="display: inline-flex; align-items: center; gap: 8px; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; padding: 6px 12px; border-radius: 999px; font-size: 11px; font-weight: 700;">
-                  <img src="{{ asset('assets/images/partners/puri-canggu-rooms.webp') }}" alt="Puri Canggu" style="width: 20px; height: 20px; border-radius: 4px; object-fit: cover;" />
-                  Puri Canggu
-                </span>
-                <span style="display: inline-flex; align-items: center; gap: 8px; background: #0f172a; color: #f59e0b; padding: 6px 12px; border-radius: 999px; font-size: 11px; font-weight: 700;">
-                  <img src="{{ asset('assets/images/partners/warung-dangin.webp') }}" alt="Warung Dangin" style="height: 13px; width: auto; object-fit: contain;" />
-                  Warung Dangin
+                <span style="font-size: 12px; font-weight: 700; color: #059669; display: inline-flex; align-items: center; gap: 5px;">
+                  <i class="fa-solid fa-circle-check"></i> Customer Perks Included
                 </span>
               </div>
 
-              <div style="background: #ffffff; padding: 8px; border-radius: 12px;">
-                <img src="{{ asset('assets/images/partners/ecosystem-partners-grid.webp') }}" alt="Bali Phone Repair Partner Network" style="width: 100%; height: auto; display: block; border-radius: 8px;" loading="lazy" decoding="async">
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+                <!-- Partner 1: Puco Rooftop -->
+                <div style="display: flex; align-items: center; gap: 14px; padding: 12px 14px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px;">
+                  <div style="width: 58px; height: 58px; border-radius: 12px; background: #0f172a; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; border: 1px solid #e2e8f0;">
+                    <img src="{{ asset('assets/images/partners/puco-rooftop.webp') }}" alt="Puco Rooftop" style="width: 100%; height: 100%; object-fit: cover;" />
+                  </div>
+                  <div style="flex: 1; min-width: 0;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px; flex-wrap: wrap; margin-bottom: 2px;">
+                      <strong style="font-size: 15px; font-weight: 800; color: var(--color-gray-900);">Puco Rooftop</strong>
+                      <span style="font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #0f172a; color: #ffffff; text-transform: uppercase;">Chill &amp; Wait</span>
+                    </div>
+                    <p style="font-size: 12px; color: var(--color-gray-600); margin: 0 0 5px;">Cafe, Rooftop Lounge &amp; Coworking &bull; Bali</p>
+                    <div style="display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; color: #047857; background: #ecfdf5; border: 1px solid #a7f3d0; padding: 2px 8px; border-radius: 6px;">
+                      <i class="fa-solid fa-gift"></i>
+                      <span>Diskon F&amp;B sambil menunggu servis</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Partner 2: Puri Canggu Rooms -->
+                <div style="display: flex; align-items: center; gap: 14px; padding: 12px 14px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px;">
+                  <div style="width: 58px; height: 58px; border-radius: 12px; background: #f1f5f9; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; border: 1px solid #e2e8f0;">
+                    <img src="{{ asset('assets/images/partners/puri-canggu-rooms.webp') }}" alt="Puri Canggu Rooms" style="width: 100%; height: 100%; object-fit: cover;" />
+                  </div>
+                  <div style="flex: 1; min-width: 0;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px; flex-wrap: wrap; margin-bottom: 2px;">
+                      <strong style="font-size: 15px; font-weight: 800; color: var(--color-gray-900);">Puri Canggu Rooms</strong>
+                      <span style="font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; text-transform: uppercase;">Stay &amp; Repair</span>
+                    </div>
+                    <p style="font-size: 12px; color: var(--color-gray-600); margin: 0 0 5px;">Boutique Stay &amp; Villa Rooms &bull; Canggu</p>
+                    <div style="display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; color: #047857; background: #ecfdf5; border: 1px solid #a7f3d0; padding: 2px 8px; border-radius: 6px;">
+                      <i class="fa-solid fa-gift"></i>
+                      <span>Home service prioritas ke kamar + promo stay</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Partner 3: Warung Dangin -->
+                <div style="display: flex; align-items: center; gap: 14px; padding: 12px 14px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px;">
+                  <div style="width: 58px; height: 58px; border-radius: 12px; background: #0f172a; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; border: 1px solid #e2e8f0;">
+                    <img src="{{ asset('assets/images/partners/warung-dangin.webp') }}" alt="Warung Dangin" style="width: 100%; height: 100%; object-fit: contain; padding: 6px;" />
+                  </div>
+                  <div style="flex: 1; min-width: 0;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px; flex-wrap: wrap; margin-bottom: 2px;">
+                      <strong style="font-size: 15px; font-weight: 800; color: var(--color-gray-900);">Warung Dangin</strong>
+                      <span style="font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #fffbeb; color: #b45309; border: 1px solid #fde68a; text-transform: uppercase;">Dining Benefit</span>
+                    </div>
+                    <p style="font-size: 12px; color: var(--color-gray-600); margin: 0 0 5px;">Kuliner Otentik Bali &amp; Resto</p>
+                    <div style="display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; color: #047857; background: #ecfdf5; border: 1px solid #a7f3d0; padding: 2px 8px; border-radius: 6px;">
+                      <i class="fa-solid fa-gift"></i>
+                      <span>Voucher diskon menu kuliner otentik</span>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div style="margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--color-gray-200); display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: var(--color-gray-600);">
-                <span>✨ Verified Bali Ecosystem</span>
-                <span style="font-weight: 700; color: #059669;"><i class="fa-solid fa-circle-check"></i> Customer Perks Included</span>
+              <div style="margin-top: 16px; padding-top: 12px; border-top: 1px dashed var(--color-gray-200); display: flex; align-items: center; justify-content: space-between; font-size: 11.5px; color: var(--color-gray-600); flex-wrap: wrap; gap: 6px;">
+                <span>✨ Eksklusif pelanggan Bali Phone Repair</span>
+                <span style="font-weight: 700; color: #059669;"><i class="fa-solid fa-circle-check"></i> 3 Mitra Resmi Terverifikasi</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-      <div style="text-align: center; margin-top: 32px;">
-        <a href="{{ route('partners.index') }}" style="display: inline-flex; align-items: center; gap: 8px; background: #2563eb; color: #ffffff; padding: 12px 26px; border-radius: 999px; font-weight: 700; font-size: 0.95rem; text-decoration: none; box-shadow: 0 4px 12px rgba(37,99,235,0.3); transition: background 0.2s ease;">
-          <span>Lihat Benefit Mitra Selengkapnya</span>
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
       </div>
     </section>
 

@@ -7,8 +7,8 @@
         ? '+'.preg_replace('/\D+/', '', $phone)
         : null;
     $email = $siteSettings['email'] ?? 'hello@baliphonerepair.com';
-    $title = 'Book Your Repair Now - Get More Benefit at Our Partners | Bali Phone Repair';
-    $description = 'Servis HP, MacBook, dan laptop di Bali Phone Repair dan nikmati berbagai benefit eksklusif di UMKM mitra kami di Bali: Puco Rooftop, Puri Canggu Rooms, dan Warung Dangin.';
+    $title = 'Our Partners - Book Your Repair Now, Get More Benefit at Our Partners | Bali Phone Repair';
+    $description = 'Jaringan mitra resmi UMKM Bali Phone Repair. Dapatkan benefit eksklusif di Puco Rooftop, Puri Canggu Rooms, Warung Dangin, dan mitra gaya hidup terkemuka di Bali.';
     $canonical = route('partners.index');
 @endphp
 <!doctype html>
@@ -27,7 +27,7 @@
   <meta property="og:title" content="{{ $title }}" />
   <meta property="og:description" content="{{ $description }}" />
   <meta property="og:url" content="{{ $canonical }}" />
-  <meta property="og:image" content="{{ asset('assets/images/partners/puco-rooftop.webp') }}" />
+  <meta property="og:image" content="{{ asset('assets/images/partners/ecosystem-partners-grid.webp') }}" />
   <meta name="twitter:card" content="summary_large_image" />
 
   @include('public.partials.analytics-head')
@@ -45,6 +45,7 @@
       --color-gray-200: #e2e8f0;
       --color-gray-100: #f8fafc;
       --color-white: #ffffff;
+      --accent-green: #1e3a34;
     }
 
     body {
@@ -65,7 +66,7 @@
       left: 0;
       right: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--color-gray-200);
@@ -156,56 +157,97 @@
       color: var(--color-gray-900);
     }
 
-    /* Section Typography matching Homepage */
-    .section-eyebrow-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #fffbeb;
-      color: #b45309;
-      border: 1px solid rgba(217, 119, 6, 0.25);
-      font-size: 13px;
-      font-weight: 800;
-      padding: 5px 14px;
-      border-radius: 999px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .section-main-title {
-      font-size: clamp(28px, 4vw, 42px);
-      font-weight: 800;
-      color: var(--color-gray-900);
-      letter-spacing: -0.03em;
-      margin: 12px 0 14px;
-      line-height: 1.25;
-    }
-    .section-main-subtitle {
-      font-size: 16px;
-      color: var(--color-gray-600);
-      line-height: 1.6;
-      max-width: 760px;
+    /* Reference Style Layout Elements */
+    .partner-hero-section {
+      padding: 110px 20px 60px;
+      max-width: 1240px;
       margin: 0 auto;
     }
-
-    /* Partner Card Style matching Physical Workshops */
-    .partner-card {
+    .partner-top-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 36px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--color-gray-200);
+    }
+    .partner-top-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--accent-green);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .partner-top-perks {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent-green);
+      letter-spacing: 1px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .partner-split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .partner-left-content h1 {
+      font-size: clamp(28px, 3.8vw, 42px);
+      font-weight: 900;
+      color: var(--color-gray-900);
+      line-height: 1.2;
+      margin: 0 0 16px;
+      letter-spacing: -0.03em;
+    }
+    .partner-lifestyle-lead {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--color-gray-900);
+      line-height: 1.45;
+      margin: 0 0 18px;
+    }
+    .partner-body-p {
+      font-size: 15px;
+      color: var(--color-gray-700);
+      line-height: 1.7;
+      margin: 0 0 16px;
+    }
+    .partner-logo-canvas {
       background: #ffffff;
       border: 1px solid var(--color-gray-200);
-      border-radius: 18px;
+      border-radius: 20px;
       padding: 24px;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+      position: relative;
     }
-    .partner-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 20px -5px rgba(0,0,0,0.08);
-      border-color: #cbd5e1;
+    .partner-featured-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f1f5f9;
+      flex-wrap: wrap;
+    }
+    .pill-partner-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.04);
     }
 
     @media (max-width: 900px) {
+      .partner-split-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
       .nav-links-desktop { display: none; }
       .nav-links-desktop.show-mobile {
         display: flex;
@@ -227,7 +269,7 @@
 <body>
   @include('public.partials.analytics-body')
 
-  <!-- HEADER (MATCHING HOMEPAGE) -->
+  <!-- HEADER -->
   <header class="top-header">
     <div class="top-header-inner">
       <a class="brand-group" href="{{ route('home') }}" aria-label="Bali Phone Repair">
@@ -262,134 +304,98 @@
     </div>
   </header>
 
-  <main style="padding-top: 68px;">
-    <!-- HERO SECTION (CLEAN & BRIGHT) -->
-    <section style="padding: 50px 20px 40px; text-align: center; background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); border-bottom: 1px solid var(--color-gray-200);">
-      <div style="max-width: 1200px; margin: 0 auto;">
-        <div style="font-size: 13px; color: var(--color-gray-600); margin-bottom: 16px;">
-          <a href="{{ route('home') }}" style="color: var(--primary-blue); font-weight: 600;">Home</a>
-          <span style="margin: 0 6px;">/</span>
-          <span>Partners</span>
-        </div>
-        <span class="section-eyebrow-pill">
-          <i class="fa-solid fa-handshake"></i> Verified Local Partners
-        </span>
-        <h1 class="section-main-title">
-          Book your repair now <br>
-          <span style="color: var(--primary-blue);">Get more benefit at our Partners</span>
-        </h1>
-        <p class="section-main-subtitle">
-          Kami bermitra dengan bisnis dan UMKM lokal terkemuka di Bali untuk memberikan nilai tambah bagi setiap pelanggan Bali Phone Repair. Sambil menunggu servis perangkat Anda selesai, nikmati promo spesial, ruang tunggu eksklusif, hingga voucher menarik di mitra pilihan kami.
-        </p>
+  <main>
+    <!-- REFERENCE-MATCHING PARTNER SHOWCASE SECTION -->
+    <section class="partner-hero-section">
+      <!-- TOP BAR (EXACT REFERENCE: OUR PARTNERS // MORE BENEFITS) -->
+      <div class="partner-top-meta">
+        <span class="partner-top-title">OUR PARTNERS</span>
+        <span class="partner-top-perks">🍀 // MORE BENEFITS</span>
       </div>
-    </section>
 
-    <!-- PARTNERS GRID SECTION -->
-    <section style="padding: 60px 20px; background: #f8fafc; border-bottom: 1px solid var(--color-gray-200);">
-      <div style="max-width: 1200px; margin: 0 auto;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
+      <div class="partner-split-grid">
+        <!-- LEFT COLUMN: EDITORIAL NARRATIVE -->
+        <div class="partner-left-content">
+          <h1>
+            Book your repair now <br>
+            <span style="color: var(--primary-blue);">Get more benefit at our Partners</span>
+          </h1>
 
-          <!-- Partner 1: Puco Rooftop -->
-          <article class="partner-card">
-            <div>
-              <div style="background: #0f172a; border-radius: 14px; height: 180px; display: flex; align-items: center; justify-content: center; padding: 16px; margin-bottom: 18px; position: relative;">
-                <img src="{{ asset('assets/images/partners/puco-rooftop.webp') }}" alt="Puco Rooftop logo" style="max-height: 100%; max-width: 100%; object-fit: contain;" loading="lazy" decoding="async">
-                <span style="position: absolute; top: 10px; right: 10px; background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px;">
-                  Chill &amp; Wait Spot
-                </span>
-              </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                <span style="font-size: 0.75rem; font-weight: 700; color: #2563eb; background: #eff6ff; padding: 4px 10px; border-radius: 999px;">Cafe &amp; Rooftop</span>
-                <span style="font-size: 0.8rem; color: var(--color-gray-600); font-weight: 600;">📍 Bali</span>
-              </div>
-              <h2 style="font-size: 1.35rem; font-weight: 700; color: var(--color-gray-900); margin: 6px 0 10px;">Puco Rooftop</h2>
-              <p style="color: var(--color-gray-600); font-size: 0.9rem; line-height: 1.6; margin-bottom: 16px;">
-                Nikmati suasana rooftop yang estetik dengan aneka hidangan kopi dan makanan lezat sambil menunggu pengerjaan servis perangkat Anda.
-              </p>
-            </div>
-            <div>
-              <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 12px 14px; font-size: 0.875rem; color: #15803d; font-weight: 600; margin-bottom: 16px;">
-                🎁 <strong>Customer Benefit:</strong> Tempat Nyaman Menunggu Servis &amp; Diskon F&amp;B
-              </div>
-              <a href="https://wa.me/{{ $whatsapp }}?text=Halo%20Bali%20Phone%20Repair%2C%20saya%20tertarik%20dengan%20benefit%20partner%20Puco%20Rooftop" target="_blank" rel="noreferrer" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; box-sizing: border-box; background: #2563eb; color: #ffffff; padding: 11px; border-radius: 10px; font-weight: 600; font-size: 0.9rem; transition: background .2s ease;">
-                <i class="fa-brands fa-whatsapp"></i> Tanya Info Benefit Puco Rooftop
-              </a>
-            </div>
-          </article>
+          <p class="partner-lifestyle-lead">
+            More than a repair — it's a lifestyle full of perks.
+          </p>
 
-          <!-- Partner 2: Puri Canggu Rooms -->
-          <article class="partner-card">
-            <div>
-              <div style="background: #f1f5f9; border-radius: 14px; height: 180px; display: flex; align-items: center; justify-content: center; padding: 16px; margin-bottom: 18px; position: relative; border: 1px solid #e2e8f0;">
-                <img src="{{ asset('assets/images/partners/puri-canggu-rooms.webp') }}" alt="Puri Canggu Rooms logo" style="max-height: 100%; max-width: 100%; object-fit: contain;" loading="lazy" decoding="async">
-                <span style="position: absolute; top: 10px; right: 10px; background: rgba(37, 99, 235, 0.15); color: #2563eb; border: 1px solid rgba(37, 99, 235, 0.3); font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px;">
-                  Stay &amp; Repair
-                </span>
-              </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                <span style="font-size: 0.75rem; font-weight: 700; color: #16a34a; background: #f0fdf4; padding: 4px 10px; border-radius: 999px;">Boutique Stay</span>
-                <span style="font-size: 0.8rem; color: var(--color-gray-600); font-weight: 600;">📍 Canggu, Bali</span>
-              </div>
-              <h2 style="font-size: 1.35rem; font-weight: 700; color: var(--color-gray-900); margin: 6px 0 10px;">Puri Canggu Rooms</h2>
-              <p style="color: var(--color-gray-600); font-size: 0.9rem; line-height: 1.6; margin-bottom: 16px;">
-                Akomodasi tenang dan nyaman di pusat Canggu. Tamu yang menginap mendapatkan akses panggilan teknisi Bali Phone Repair langsung ke kamar.
-              </p>
-            </div>
-            <div>
-              <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 12px 14px; font-size: 0.875rem; color: #1d4ed8; font-weight: 600; margin-bottom: 16px;">
-                🎁 <strong>Customer Benefit:</strong> Layanan Home Service Prioritas &amp; Promo Stay
-              </div>
-              <a href="https://wa.me/{{ $whatsapp }}?text=Halo%20Bali%20Phone%20Repair%2C%20saya%20tertarik%20dengan%20benefit%20partner%20Puri%20Canggu%20Rooms" target="_blank" rel="noreferrer" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; box-sizing: border-box; background: #0f172a; color: #ffffff; padding: 11px; border-radius: 10px; font-weight: 600; font-size: 0.9rem; transition: background .2s ease;">
-                <i class="fa-brands fa-whatsapp"></i> Tanya Info Benefit Puri Canggu
-              </a>
-            </div>
-          </article>
+          <p class="partner-body-p">
+            At <strong>Bali Phone Repair</strong>, we believe that community goes beyond our workshop walls. That's why we've partnered with amazing local brands, wellness studios, boutique stays, and lifestyle spots across Bali to bring extra benefits for our clients.
+          </p>
 
-          <!-- Partner 3: Warung Dangin -->
-          <article class="partner-card">
-            <div>
-              <div style="background: #0f172a; border-radius: 14px; height: 180px; display: flex; align-items: center; justify-content: center; padding: 16px; margin-bottom: 18px; position: relative;">
-                <img src="{{ asset('assets/images/partners/warung-dangin.webp') }}" alt="Warung Dangin logo" style="max-height: 100%; max-width: 100%; object-fit: contain;" loading="lazy" decoding="async">
-                <span style="position: absolute; top: 10px; right: 10px; background: rgba(234, 88, 12, 0.2); color: #f97316; border: 1px solid rgba(234, 88, 12, 0.35); font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px;">
-                  Dining Benefit
-                </span>
-              </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                <span style="font-size: 0.75rem; font-weight: 700; color: #ea580c; background: #fff7ed; padding: 4px 10px; border-radius: 999px;">Kuliner Bali</span>
-                <span style="font-size: 0.8rem; color: var(--color-gray-600); font-weight: 600;">📍 Bali</span>
-              </div>
-              <h2 style="font-size: 1.35rem; font-weight: 700; color: var(--color-gray-900); margin: 6px 0 10px;">Warung Dangin</h2>
-              <p style="color: var(--color-gray-600); font-size: 0.9rem; line-height: 1.6; margin-bottom: 16px;">
-                Sajian kuliner khas Bali dengan cita rasa otentik bumbu warisan. Tunjukkan nota/chat servis BPR untuk klaim keuntungan spesial saat bersantap.
-              </p>
-            </div>
-            <div>
-              <div style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: 10px; padding: 12px 14px; font-size: 0.875rem; color: #c2410c; font-weight: 600; margin-bottom: 16px;">
-                🎁 <strong>Customer Benefit:</strong> Voucher Diskon Makanan Khusus Customer BPR
-              </div>
-              <a href="https://wa.me/{{ $whatsapp }}?text=Halo%20Bali%20Phone%20Repair%2C%20saya%20tertarik%20dengan%20benefit%20partner%20Warung%20Dangin" target="_blank" rel="noreferrer" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; box-sizing: border-box; background: #2563eb; color: #ffffff; padding: 11px; border-radius: 10px; font-weight: 600; font-size: 0.9rem; transition: background .2s ease;">
-                <i class="fa-brands fa-whatsapp"></i> Tanya Info Benefit Warung Dangin
-              </a>
-            </div>
-          </article>
+          <p class="partner-body-p">
+            From exclusive discounts and complimentary treats, to special invitations and customer-only experiences, our partnerships are designed to make your Bali journey even more rewarding — inside and outside our hubs, while your device is being expertly restored.
+          </p>
 
+          <p class="partner-body-p">
+            Because choosing Bali Phone Repair means staying connected to a bigger ecosystem — <strong>where quality, collaboration, and good vibes never stop.</strong>
+          </p>
+
+          <div style="margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap;">
+            <a class="btn-quote-pill" href="https://wa.me/{{ $whatsapp }}?text=Hi%20Bali%20Phone%20Repair%2C%20I%20would%20like%20to%20know%20more%20about%20Partner%20Perks" target="_blank" rel="noreferrer" style="padding: 12px 24px; font-size: 14px;">
+              <i class="fa-brands fa-whatsapp" style="font-size: 1.1em;"></i>
+              <span>Claim Partner Perks via WhatsApp</span>
+            </a>
+            <a href="{{ route('home') }}#locations" style="display: inline-flex; align-items: center; gap: 6px; background: var(--color-gray-100); color: var(--color-gray-900); padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 14px; border: 1px solid var(--color-gray-200);">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary-blue);"></i> Find Workshops
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: CLEAN LOGO GRID BOARD (EXACT REFERENCE ARRANGEMENT) -->
+        <div>
+          <div class="partner-logo-canvas">
+            <!-- Featured Key Partners Spotlight Badges -->
+            <div class="partner-featured-strip">
+              <span class="pill-partner-badge" style="background: #0f172a; color: #ffffff;">
+                <img src="{{ asset('assets/images/partners/puco-rooftop.webp') }}" alt="Puco Rooftop" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover;" />
+                Puco Rooftop &bull; Cafe &amp; Cowork
+              </span>
+              <span class="pill-partner-badge" style="background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">
+                <img src="{{ asset('assets/images/partners/puri-canggu-rooms.webp') }}" alt="Puri Canggu Rooms" style="width: 22px; height: 22px; border-radius: 4px; object-fit: cover;" />
+                Puri Canggu &bull; Rooms &amp; Stay
+              </span>
+              <span class="pill-partner-badge" style="background: #0f172a; color: #f59e0b;">
+                <img src="{{ asset('assets/images/partners/warung-dangin.webp') }}" alt="Warung Dangin" style="height: 14px; width: auto; object-fit: contain;" />
+                Warung Dangin &bull; Bali Resto
+              </span>
+            </div>
+
+            <!-- Crisp Logo Grid Layout matching Reference -->
+            <div style="background: #ffffff; padding: 12px 8px; border-radius: 12px;">
+              <img src="{{ asset('assets/images/partners/ecosystem-partners-grid.webp') }}" alt="Bali Phone Repair UMKM Partner Network - Puri Canggu, Warung Dangin, Indodax, Deskimo, Canggu Studio, Vault, Villa Youlas, Boho, Bookspace, Levera, Dentiq, Surf Bali Hub, Alchemy" style="width: 100%; height: auto; display: block; border-radius: 8px;" loading="lazy" decoding="async">
+            </div>
+
+            <div style="margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--color-gray-200); display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: var(--color-gray-600);">
+              <span>✨ Official Verified Ecosystem</span>
+              <span style="font-weight: 700; color: #059669;"><i class="fa-solid fa-circle-check"></i> Active Customer Benefits</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 3 STEPS HOW IT WORKS (CLEAN WHITE) -->
-    <section style="padding: 60px 20px; background: #ffffff; border-bottom: 1px solid var(--color-gray-200);">
+    <!-- 3 SIMPLE STEPS TO CLAIM -->
+    <section style="padding: 60px 20px; background: #f8fafc; border-top: 1px solid var(--color-gray-200); border-bottom: 1px solid var(--color-gray-200);">
       <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-        <span class="section-eyebrow-pill">
-          <i class="fa-solid fa-circle-check"></i> Simple &amp; Easy
+        <span class="section-eyebrow-pill" style="display: inline-flex; align-items: center; gap: 6px; background: #fffbeb; color: #b45309; border: 1px solid rgba(217, 119, 6, 0.25); font-size: 13px; font-weight: 800; padding: 5px 14px; border-radius: 999px;">
+          <i class="fa-solid fa-circle-check"></i> Simple &amp; Rewarding
         </span>
-        <h2 class="section-main-title" style="margin-top: 10px;">3 Langkah Mudah Klaim Keuntungan</h2>
-        <p class="section-main-subtitle" style="margin-bottom: 40px;">
-          Cukup tunjukkan bukti pengerjaan servis dari Bali Phone Repair saat berkunjung ke mitra kami.
+        <h2 style="font-size: clamp(24px, 3.5vw, 34px); font-weight: 800; color: var(--color-gray-900); margin: 12px 0 10px;">
+          Cara Mudah Klaim Keuntungan di Mitra Kami
+        </h2>
+        <p style="color: var(--color-gray-600); font-size: 16px; margin: 0 0 36px;">
+          Cukup 3 langkah praktis untuk menikmati fasilitas spesial di seluruh jaringan mitra BPR.
         </p>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; text-align: left;">
-          <div style="background: #f8fafc; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 24px;">
+          <div style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 26px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);">
             <div style="font-size: 32px; font-weight: 900; color: #2563eb; margin-bottom: 8px;">01</div>
             <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-gray-900); margin: 0 0 8px;">Book Your Repair</h3>
             <p style="color: var(--color-gray-600); font-size: 0.9rem; line-height: 1.6; margin: 0;">
@@ -397,7 +403,7 @@
             </p>
           </div>
 
-          <div style="background: #f8fafc; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 24px;">
+          <div style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 26px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);">
             <div style="font-size: 32px; font-weight: 900; color: #2563eb; margin-bottom: 8px;">02</div>
             <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-gray-900); margin: 0 0 8px;">Simpan Bukti Servis</h3>
             <p style="color: var(--color-gray-600); font-size: 0.9rem; line-height: 1.6; margin: 0;">
@@ -405,18 +411,18 @@
             </p>
           </div>
 
-          <div style="background: #f8fafc; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 24px;">
+          <div style="background: #ffffff; border: 1px solid var(--color-gray-200); border-radius: 16px; padding: 26px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);">
             <div style="font-size: 32px; font-weight: 900; color: #2563eb; margin-bottom: 8px;">03</div>
             <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-gray-900); margin: 0 0 8px;">Tunjukkan di Mitra Kami</h3>
             <p style="color: var(--color-gray-600); font-size: 0.9rem; line-height: 1.6; margin: 0;">
-              Datang ke Puco Rooftop, Puri Canggu Rooms, atau Warung Dangin dan tunjukkan bukti servis untuk menikmati benefit langsung.
+              Datang ke lokasi mitra pilihan Anda di Bali dan tunjukkan bukti servis untuk menikmati diskon, promo santap, atau privilege langsung.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA BANNER (MATCHING HOMEPAGE BOTTOM CTA) -->
+    <!-- BOTTOM CTA BANNER -->
     <section style="background: #0f172a; color: #ffffff; padding: 60px 20px; text-align: center;">
       <div style="max-width: 800px; margin: 0 auto;">
         <h2 style="font-size: clamp(26px, 3.5vw, 36px); font-weight: 800; color: #ffffff; margin: 0 0 12px; letter-spacing: -0.02em;">

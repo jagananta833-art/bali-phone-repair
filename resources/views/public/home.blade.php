@@ -1748,6 +1748,86 @@
       </div>
     </section>
 
+    <!-- Official UMKM Partners Network -->
+    <section class="section-standard" id="partners" style="background: #ffffff; border-bottom: 1px solid var(--color-gray-200); padding: 60px 0;">
+      <div class="section-head-center">
+        <span class="section-eyebrow-pill" style="background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0;">
+          <i class="fa-solid fa-handshake"></i> Verified Local Partners
+        </span>
+        <h2 class="section-main-title">Book Your Repair, Enjoy Exclusive Partner Benefits</h2>
+        <p class="section-main-subtitle">Dapatkan voucher diskon, ruang santai menunggu servis, dan fasilitas istimewa di kafe, resto, dan penginapan mitra resmi kami di Bali.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; padding: 0 16px;">
+        <!-- Partner 1: Puco Rooftop -->
+        <article style="background: #0f172a; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); color: #ffffff; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+          <div>
+            <div style="background: #000000; border-radius: 14px; height: 160px; display: flex; align-items: center; justify-content: center; padding: 12px; margin-bottom: 18px; border: 1px solid #1e293b;">
+              <img src="{{ asset('assets/images/partners/puco-rooftop.webp') }}" alt="Puco Rooftop logo" style="max-height: 100%; max-width: 100%; object-fit: contain;" loading="lazy" decoding="async">
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.5px;">Cafe &amp; Rooftop</span>
+              <span style="font-size: 0.75rem; background: #1e293b; color: #cbd5e1; padding: 2px 8px; border-radius: 999px;">📍 Bali</span>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: #f8fafc; margin: 0 0 8px;">Puco Rooftop</h3>
+            <p style="font-size: 0.875rem; color: #94a3b8; line-height: 1.5; margin-bottom: 14px;">
+              Tempat santai dan co-working estetik untuk menunggu servis HP Anda selesai sambil menikmati kopi &amp; pemandangan Bali.
+            </p>
+          </div>
+          <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 10px; padding: 10px 12px; font-size: 0.8rem; color: #38bdf8; font-weight: 600;">
+            🎁 Diskon F&amp;B Khusus Customer BPR
+          </div>
+        </article>
+
+        <!-- Partner 2: Puri Canggu Rooms -->
+        <article style="background: #0f172a; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); color: #ffffff; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+          <div>
+            <div style="background: #000000; border-radius: 14px; height: 160px; display: flex; align-items: center; justify-content: center; padding: 12px; margin-bottom: 18px; border: 1px solid #1e293b;">
+              <img src="{{ asset('assets/images/partners/puri-canggu-rooms.webp') }}" alt="Puri Canggu Rooms logo" style="max-height: 100%; max-width: 100%; object-fit: contain;" loading="lazy" decoding="async">
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.5px;">Boutique Stay</span>
+              <span style="font-size: 0.75rem; background: #1e293b; color: #cbd5e1; padding: 2px 8px; border-radius: 999px;">📍 Canggu</span>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: #f8fafc; margin: 0 0 8px;">Puri Canggu Rooms</h3>
+            <p style="font-size: 0.875rem; color: #94a3b8; line-height: 1.5; margin-bottom: 14px;">
+              Penginapan nyaman &amp; strategis di Canggu. Tamu yang menginap mendapatkan akses prioritas teknisi datang ke villa/kamar.
+            </p>
+          </div>
+          <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 10px; padding: 10px 12px; font-size: 0.8rem; color: #38bdf8; font-weight: 600;">
+            🎁 Prioritas On-Site Service &amp; Promo Stay
+          </div>
+        </article>
+
+        <!-- Partner 3: Warung Dangin -->
+        <article style="background: #0f172a; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); color: #ffffff; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+          <div>
+            <div style="background: #000000; border-radius: 14px; height: 160px; display: flex; align-items: center; justify-content: center; padding: 12px; margin-bottom: 18px; border: 1px solid #1e293b;">
+              <img src="{{ asset('assets/images/partners/warung-dangin.webp') }}" alt="Warung Dangin logo" style="max-height: 100%; max-width: 100%; object-fit: contain;" loading="lazy" decoding="async">
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.5px;">Kuliner Bali</span>
+              <span style="font-size: 0.75rem; background: #1e293b; color: #cbd5e1; padding: 2px 8px; border-radius: 999px;">📍 Bali</span>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: #f8fafc; margin: 0 0 8px;">Warung Dangin</h3>
+            <p style="font-size: 0.875rem; color: #94a3b8; line-height: 1.5; margin-bottom: 14px;">
+              Kuliner otentik khas Bali dengan cita rasa rempah asli. Tunjukkan nota servis BPR Anda untuk klaim promo santap hemat.
+            </p>
+          </div>
+          <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 10px; padding: 10px 12px; font-size: 0.8rem; color: #38bdf8; font-weight: 600;">
+            🎁 Voucher Santap Kuliner Spesial
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="{{ route('partners.index') }}" style="display: inline-flex; align-items: center; gap: 8px; background: #2563eb; color: #ffffff; padding: 12px 26px; border-radius: 999px; font-weight: 700; font-size: 0.95rem; text-decoration: none; box-shadow: 0 4px 12px rgba(37,99,235,0.3); transition: background 0.2s ease;">
+          <span>Lihat Benefit Mitra Selengkapnya</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
     <!-- Frequently Asked Questions (Reference: iphonerepairbali.com) -->
     <section class="section-standard" id="faq">
       <div class="section-head-center">
